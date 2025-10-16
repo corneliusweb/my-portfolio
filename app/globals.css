@@ -1,11 +1,84 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @layer base {
-  body {
-    font-family: var(--font-geist-mono);
-  }
+	body {
+		background-color: #0a0a0a;
+		color: #f1f1f1;
+		font-family: var(--font-geist-mono);
+		font-weight: 400;
+		font-style: normal;
+	}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-geist-sans);
-  }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-geist-sans);
+	}
+
+	button {
+		cursor: pointer;
+	}
 }
+
+@theme {
+	/* Fonts */
+	--font-grotesk: 'Space Grotesk', sans-serif;
+	--font-inter: 'Inter', sans-serif;
+
+	/* Core Colors */
+	--color-page-bg: #0a0a0a;
+	--color-page-txt: #f1f1f1;
+
+	/* Accent */
+	--color-accent: #ffb86b; /* Warm orange */
+	--color-accent-hover: #ff9d42;
+	--color-accent-muted: #ffd9a8;
+	--color-accent-dark: #e89a52; /* For pressed states */
+
+	/* Surface */
+	--color-surface: #0f0f10;
+	--color-card: #141414; /* Slightly lighter for better hierarchy */
+	--color-card-hover: #1a1a1a; /* Hover state for cards */
+	--color-icon-bg: #2a2a2a;
+
+	/* Typography */
+	--color-heading: #fafafa;
+	--color-text-body: #c7c7c7;
+	--color-text-muted: #9a9a9a; /* For less important text */
+	--color-text-accent: #ffb86b; /* For highlighted text */
+
+	/* Additional Colors */
+	--color-border: #2a2a2a; /* For borders */
+	--color-success: #4ade80; /* For contact form success */
+	--color-warning: #facc15; /* For notifications */
+	--color-link: #60a5fa; /* For external links */
+
+	/* Skills section sizing */
+	--max-width-icon-container: 54rem;
+}
+
+@layer components {
+	.nav-link {
+		@apply py-4 hover:bg-card hover:text-accent block transition-colors duration-150 ease-in-out sm:hover:border-b sm:hover:border-accent sm:p-6;
+	}
+	.active-link {
+		@apply text-accent sm:border-b border-accent;
+	}
+	.cta-btn {
+		@apply bg-card w-15 h-15 flex items-center justify-center rounded-full transition-colors duration-150 ease-in-out;
+	}
+	.skills-list {
+		@apply flex flex-col gap-2 items-center text-sm tracking-wide text-white/70;
+	}
+	.skills-icon {
+		@apply text-accent-dark text-5xl animate-pulse block -z-5 md:text-6xl;
+	}
+	.fp-links {
+		@apply text-accent transition-colors duration-150 ease-in-out flex items-center underline underline-offset-5 decoration-2 font-bold uppercase text-sm hover:text-accent-hover;
+	}
+}
+
+/* REMINDER: Make some cool stuffs with clip-path */
