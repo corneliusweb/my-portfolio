@@ -34,4 +34,11 @@ export interface SocialLink {
 	icon: IconType;
 }
 
+export interface SocialLinkProps {
+	show?: string[];
+	LinkClass?: string;
+	IconClass: string;
+	size?: number;
+}
+
 export type CustomIconProps = React.SVGProps<SVGSVGElement> & { size?: number };
