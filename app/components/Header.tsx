@@ -83,7 +83,7 @@ const Header = () => {
 				>
 					<ul
 						onClick={handleNavLinkClick}
-						className='bg-card h-screen w-5/7 px-10 py-20 space-y-8 sm:bg-transparent sm:flex sm:gap-0.5 sm:px-0 sm:h-auto sm:space-y-0 sm:w-auto sm:py-0'
+						className='bg-card h-screen w-5/7 px-10 py-20 space-y-8 sm:bg-transparent sm:flex sm:px-0 sm:h-auto sm:space-y-0 sm:w-auto sm:py-0'
 					>
 						<li>
 							<Link

@@ -25,7 +25,7 @@
 
 @theme {
 	/* Fonts */
-	--font-grotesk: 'Space Grotesk', sans-serif;
+	--font-grotesk: var(--font), sans-serif;
 	--font-inter: 'Inter', sans-serif;
 
 	/* Core Colors */
@@ -62,7 +62,7 @@
 
 @layer components {
 	.nav-link {
-		@apply py-4 hover:bg-card hover:text-accent block transition-colors duration-150 ease-in-out sm:hover:border-b sm:hover:border-accent sm:p-6;
+		@apply py-4 hover:bg-card hover:text-accent/70 block transition-colors duration-150 ease-in-out sm:hover:border-b sm:hover:border-accent/50 sm:p-6;
 	}
 	.active-link {
 		@apply text-accent sm:border-b border-accent;
