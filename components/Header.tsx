@@ -54,11 +54,13 @@ const Header = () => {
 				</h1>
 
 				<button
+					type='button'
 					aria-controls='primary-navigation'
 					aria-expanded={isNavOpen}
 					onClick={() => setIsNavOpen(!isNavOpen)}
 					className='sm:hidden z-50'
 				>
+					<span className='sr-only'>Menu/Close button</span>
 					{isNavOpen ? (
 						<LuSquareX
 							size={35}
