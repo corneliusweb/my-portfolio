@@ -1,9 +1,21 @@
+import {
+	AboutSection,
+	ContactSection,
+	FeaturedProjectsSection,
+	HeroSection,
+	SkillsSection,
+} from '@/components';
 
-
-export default function Home() {
+const Home = () => {
 	return (
-		<>
-			<h1>/home</h1>
-		</>
+		<main className='grid gap-20'>
+			<HeroSection />
+			<SkillsSection />
+			<FeaturedProjectsSection />
+			<AboutSection />
+			<ContactSection />
+		</main>
 	);
-}
+};
+
+export default Home;

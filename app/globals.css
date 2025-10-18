@@ -74,7 +74,7 @@
 		@apply flex flex-col gap-2 items-center text-sm tracking-wide text-white/70;
 	}
 	.skills-icon {
-		@apply text-accent-dark text-5xl animate-pulse block -z-5 md:text-6xl;
+		@apply text-accent-dark animate-pulse block -z-5 md:text-6xl;
 	}
 	.fp-links {
 		@apply text-accent transition-colors duration-150 ease-in-out flex items-center underline underline-offset-5 decoration-2 font-bold uppercase text-sm hover:text-accent-hover;

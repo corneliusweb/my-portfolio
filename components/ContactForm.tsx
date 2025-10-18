@@ -1,3 +1,5 @@
+'use client';
+
 import { SubmitHandler, useForm } from 'react-hook-form';
 import type { ContactFormData } from '@/app/types';
 
@@ -11,10 +13,12 @@ const ContactForm = () => {
 	// send form data
 	const onSubmit: SubmitHandler<ContactFormData> = (data) => {
 		console.log('data submitted ', data);
+		const form = document.getElementsByTagName('form')[0];
+		form.reset();
 	};
 
 	return (
-		<form onSubmit={() => handleSubmit(onSubmit)}>
+		<form onSubmit={handleSubmit(onSubmit)}>
 			<div>
 				<input
 					{...register('name', {
