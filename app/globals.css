@@ -21,12 +21,21 @@
 	button {
 		cursor: pointer;
 	}
+
+	input:-webkit-autofill,
+	textarea:-webkit-autofill {
+		-webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+		box-shadow: 0 0 0 1000px transparent inset !important;
+		-webkit-text-fill-color: var(--input-color, whitesmoke) !important;
+		color: whitesmoke !important;
+		transition: background-color 5000s ease-in-out 0s;
+	}
 }
 
 @theme {
 	/* Fonts */
-	--font-grotesk: var(--font), sans-serif;
-	--font-inter: 'Inter', sans-serif;
+	--font-grotesk: var(--font-geist-sans);
+	--font-inter: var(--font-geist-mono);
 
 	/* Core Colors */
 	--color-page-bg: #0a0a0a;
@@ -78,6 +87,20 @@
 	}
 	.fp-links {
 		@apply text-accent transition-colors duration-150 ease-in-out flex items-center underline underline-offset-5 decoration-2 font-bold uppercase text-sm hover:text-accent-hover;
+	}
+	.contact-input {
+		@apply w-full px-3 py-5 rounded-md bg-card focus:outline-none placeholder-transparent focus:border focus:border-accent-dark;
+	}
+	.contact-label {
+		@apply absolute left-3 text-gray-500 transition-all duration-300 pointer-events-none top-1/2 -translate-y-1/2
+		peer-focus:-top-0.5 peer-focus:text-sm peer-focus:bg-page-bg peer-focus:px-2
+		peer-[&:not(:placeholder-shown)]:-top-0.5
+		peer-[&:not(:placeholder-shown)]:text-sm
+		peer-[&:not(:placeholder-shown)]:px-2
+		peer-[&:not(:placeholder-shown)]:bg-page-bg;
+	}
+	textarea.peer ~ .contact-label {
+		@apply top-4 -translate-y-0 peer-[&:not(:placeholder-shown)]:-top-2 peer-focus:-top-2;
 	}
 }
 

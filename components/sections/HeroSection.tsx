@@ -3,7 +3,7 @@ import { profile } from '@/public/images';
 import SocialLinks from '../SocialLinks';
 import Image from 'next/image';
 
-const Hero = () => {
+const HeroSection = () => {
 	return (
 		<section className='mt-22 md:mt-30'>
 			<div className='px-4'>
@@ -29,14 +29,14 @@ const Hero = () => {
 							className='bg-card text-text-body w-9 h-9 p-1.5 rounded-full'
 						/>
 					</a>
-					<ul className='flex gap-2'>
-						<SocialLinks
-							show={['email', 'x', 'facebook']}
-							size={24}
-							IconClass='text-accent group-hover:text-accent-hover'
-							LinkClass='cta-btn group'
-						/>
-					</ul>
+
+					<SocialLinks
+						show={['email', 'x', 'facebook']}
+						size={24}
+						IconClass='text-accent group-hover:text-accent-hover'
+						LinkClass='cta-btn group'
+						ULClass='flex gap-2'
+					/>
 				</div>
 			</div>
 			<Image
@@ -48,4 +48,4 @@ const Hero = () => {
 		</section>
 	);
 };
-export default Hero;
+export default HeroSection;

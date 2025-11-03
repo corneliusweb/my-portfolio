@@ -1,10 +1,16 @@
-import { socials } from "@/app/data/social-links";
-import type { SocialLinkProps } from "@/app/types";
+import { socials } from '@/app/data/social-links';
+import type { SocialLinkProps } from '@/app/types';
 
-const SocialLinks = ({ show, LinkClass, IconClass, size }: SocialLinkProps) => {
+const SocialLinks = ({
+	show,
+	LinkClass,
+	IconClass,
+	ULClass,
+	size,
+}: SocialLinkProps) => {
 	const visible = show ? socials.filter((s) => show.includes(s.id)) : socials;
 	return (
-		<>
+		<ul className={ULClass}>
 			{visible.map(
 				({
 					id,
@@ -32,7 +38,7 @@ const SocialLinks = ({ show, LinkClass, IconClass, size }: SocialLinkProps) => {
 					</li>
 				)
 			)}
-		</>
+		</ul>
 	);
 };
 export default SocialLinks;
