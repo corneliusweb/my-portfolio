@@ -50,3 +50,8 @@ export interface ContactFormData {
 	subject: string;
 	message: string;
 }
+
+export interface ContactFormResponse {
+	success: boolean;
+	error?: string;
+}

@@ -2,19 +2,27 @@
 
 import { SubmitHandler, useForm } from 'react-hook-form';
 import type { ContactFormData } from '@/app/types';
+import { sendContactEmail } from '@/app/actions/contact';
 
 const ContactForm = () => {
 	const {
 		register,
 		handleSubmit,
+		reset,
 		formState: { errors },
 	} = useForm<ContactFormData>();
 
 	// send form data
-	const onSubmit: SubmitHandler<ContactFormData> = (data) => {
-		console.log('data submitted ', data);
-		const form = document.getElementsByTagName('form')[0];
-		form.reset();
+	const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
+		const formData = new FormData();
+		formData.append('name', data.name);
+		formData.append('email', data.email);
+		formData.append('subject', data.subject);
+		formData.append('message', data.message);
+
+		const result = await sendContactEmail(formData);
+
+		if (result.success) reset();
 	};
 
 	return (
