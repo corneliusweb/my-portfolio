@@ -8,13 +8,13 @@ import {
 
 const Home = () => {
 	return (
-		<main className='grid gap-20'>
+		<>
 			<HeroSection />
 			<SkillsSection />
 			<FeaturedProjectsSection />
 			<AboutSection />
 			<ContactSection />
-		</main>
+		</>
 	);
 };
 

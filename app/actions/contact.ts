@@ -34,7 +34,6 @@ export const sendContactEmail = async (
 
 		return { success: true };
 	} catch (error) {
-      console.log(error)
-      return { success: false, error: 'Failed to send email' };
+		return { success: false, error: 'Failed to send email' };
 	}
 };

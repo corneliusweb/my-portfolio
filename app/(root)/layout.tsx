@@ -6,7 +6,7 @@ export default function RootLayout({
 	return (
 		<>
 			<Header />
-			{children}
+			<main className='grid gap-20'>{children}</main>
 		</>
 	);
 }
