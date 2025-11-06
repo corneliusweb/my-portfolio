@@ -13,13 +13,15 @@ const Skills = () => {
 	];
 
 	return (
-		<section className='px-4'>
-			<h2 className='uppercase mb-3 text-2xl font-medium'>Skills & Tools</h2>
+		<section>
+			<h2 className='section-heading'>Skills & Tools</h2>
+
 			<p>
 				Here are the technologies I use to design, build, and ship projects
 				efficiently.
 				{/* Reminder to add: ... but I am always ready to learn new stacks  */}
 			</p>
+
 			<div className='sm:flex  max-w-icon-container mx-auto my-8'>
 				{skillCategories.map(({ title, categories }) => (
 					<div key={title} className='not-last-of-type:mb-4 sm:mb-0'>
@@ -29,7 +31,9 @@ const Skills = () => {
 								({ icon: Icon, id, name }) => {
 									return (
 										<li key={id} className='skills-list'>
-											{Icon && <Icon size={54} className='skills-icon' />}
+											{Icon && (
+												<Icon size={54} className='skills-icon' />
+											)}
 											<span>{name}</span>
 										</li>
 									);

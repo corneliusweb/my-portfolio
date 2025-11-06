@@ -1,37 +1,39 @@
+import { LuDownload } from 'react-icons/lu';
 import ContactForm from '../ContactForm';
 import SocialLinks from '../SocialLinks';
 
 const ContactSection = () => {
 	return (
-		<section className='px-6 mb-12'>
+		<section>
 			<div className='space-y-1'>
-				<h2 className='mb-8 text-3xl font-bold uppercase'>Let's Connect</h2>
+				<h2 className='section-heading'>Let's Connect</h2>
+
 				<p>
 					Say hello at{' '}
-					<a
-						href='mailto:jammybillz@gmail.com'
-						className='underline underline-offset-5 decoration-accent hover:no-underline hover:text-accent'
-					>
+					<a href='mailto:jammybillz@gmail.com' className='text-accent'>
 						jammybillz@gmail.com
 					</a>
 				</p>
-				<p>
-					For more information, here's my{' '}
+
+				<p className='flex gap-1'>
+					For more information,
 					<a
 						href='/documents/my-resume.pdf'
 						download='Resume - Cornelius Asogwa'
-						className='underline underline-offset-5 decoration-accent hover:no-underline hover:text-accent'
+						className='flex items-center gap-1.5 text-accent'
 					>
-						resume
+						download my resume here
+						<LuDownload />
 					</a>
 				</p>
 
 				<SocialLinks
 					IconClass='text-2xl text-accent hover:text-accent-hover'
-					ULClass='flex gap-10 mt-14 mb-18'
-					size={30}
+					ULClass='flex gap-7 mt-14 mb-18'
+					size={28}
 				/>
 			</div>
+
 			<ContactForm />
 		</section>
 	);

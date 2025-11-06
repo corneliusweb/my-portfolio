@@ -7,6 +7,7 @@
 		font-family: var(--font-geist-mono);
 		font-weight: 400;
 		font-style: normal;
+		text-wrap: pretty;
 	}
 
 	h1,
@@ -101,6 +102,9 @@
 	}
 	textarea.peer ~ .contact-label {
 		@apply top-4 -translate-y-0 peer-[&:not(:placeholder-shown)]:-top-2 peer-focus:-top-2;
+	}
+	.section-heading {
+		@apply mb-6 text-3xl font-bold uppercase;
 	}
 }
 
