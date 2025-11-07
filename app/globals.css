@@ -74,24 +74,31 @@
 	.nav-link {
 		@apply py-4 hover:bg-card hover:text-accent/70 block transition-colors duration-150 ease-in-out sm:hover:border-b sm:hover:border-accent/50 sm:p-6;
 	}
+
 	.active-link {
 		@apply text-accent sm:border-b border-accent;
 	}
+
 	.cta-btn {
 		@apply bg-card w-15 h-15 flex items-center justify-center rounded-full transition-colors duration-150 ease-in-out;
 	}
+
 	.skills-list {
 		@apply flex flex-col gap-2 items-center text-sm tracking-wide text-white/70;
 	}
+
 	.skills-icon {
 		@apply text-accent-dark animate-pulse block -z-5 md:text-6xl;
 	}
+
 	.fp-links {
 		@apply text-accent transition-colors duration-150 ease-in-out flex items-center underline underline-offset-5 decoration-2 font-bold uppercase text-sm hover:text-accent-hover;
 	}
+
 	.contact-input {
 		@apply w-full px-3 py-5 rounded-md bg-card focus:outline-none placeholder-transparent focus:border focus:border-accent-dark;
 	}
+
 	.contact-label {
 		@apply absolute left-3 text-gray-500 transition-all duration-300 pointer-events-none top-1/2 -translate-y-1/2
 		peer-focus:-top-0.5 peer-focus:text-sm peer-focus:bg-page-bg peer-focus:px-2
@@ -100,11 +107,17 @@
 		peer-[&:not(:placeholder-shown)]:px-2
 		peer-[&:not(:placeholder-shown)]:bg-page-bg;
 	}
+
 	textarea.peer ~ .contact-label {
 		@apply top-4 -translate-y-0 peer-[&:not(:placeholder-shown)]:-top-2 peer-focus:-top-2;
 	}
+
 	.section-heading {
-		@apply mb-6 text-3xl font-bold uppercase;
+		@apply mb-5 text-3xl font-bold uppercase;
+	}
+
+	.section-subheading {
+		@apply mb-2.5 mt-8 text-2xl font-semibold uppercase;
 	}
 }
 

@@ -17,7 +17,7 @@ const About = () => {
 
 			<Link
 				href='/about'
-				className='flex gap-2 mt-3 items-center text-accent w-fit hover:text-accent-hover'
+				className='flex gap-0.5 mt-2 items-center text-accent w-fit hover:text-accent-hover'
 			>
 				Learn more about me <LuArrowUpRight />
 			</Link>

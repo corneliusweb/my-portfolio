@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const HeroSection = () => {
 	return (
-		<section className='mt-22 md:mt-30'>
+		<section>
 			<div>
 				<p className='text-base text-page-txt/50 uppercase tracking-wide'>
 					Hi, I am Cornelius 👋

@@ -5,7 +5,7 @@ import SocialLinks from '../SocialLinks';
 const ContactSection = () => {
 	return (
 		<section>
-			<div className='space-y-1'>
+			<div>
 				<h2 className='section-heading'>Let's Connect</h2>
 
 				<p>
