@@ -2,6 +2,7 @@
 
 import { Resend } from 'resend';
 import { ContactFormResponse } from '../types';
+import EmailTemplate from '@/components/EmailTemplate';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -13,23 +14,16 @@ export const sendContactEmail = async (
 	const subject = formData.get('subject') as string;
 	const message = formData.get('message') as string;
 
-	if (!name || !email || !message) {
+	if (!name.trim() || !email.trim() || !message.trim()) {
 		return { success: false, error: 'Please fill all fields!' };
 	}
 
 	try {
 		await resend.emails.send({
 			from: 'onboarding@resend.dev',
-			to: 'jammybillz@gmail.com',
+			to: 'cornelius.webdev@gmail.com',
 			subject: `Portfolio Contact from ${name}`,
-			html: `
-        <h2>New Contact Form Message</h2>
-        <p><strong>From:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `,
+			react: EmailTemplate({ name, email, subject, message }),
 		});
 
 		return { success: true };

@@ -96,7 +96,7 @@
 	}
 
 	.contact-input {
-		@apply w-full px-3 py-5 rounded-md bg-card focus:outline-none placeholder-transparent focus:border focus:border-accent-dark;
+		@apply w-full px-3 py-4 rounded-md bg-card focus:outline-none placeholder-transparent focus:border focus:border-accent;
 	}
 
 	.contact-label {

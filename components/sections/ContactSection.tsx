@@ -2,16 +2,21 @@ import { LuDownload } from 'react-icons/lu';
 import ContactForm from '../ContactForm';
 import SocialLinks from '../SocialLinks';
 
-const ContactSection = () => {
+const ContactSection = ({ intro }: { intro?: string }) => {
 	return (
-		<section>
+		<section className='tracking-wide leading-7'>
 			<div>
 				<h2 className='section-heading'>Let's Connect</h2>
 
+				{intro && <p className='mb-3'>{intro}</p>}
+				
 				<p>
 					Say hello at{' '}
-					<a href='mailto:jammybillz@gmail.com' className='text-accent'>
-						jammybillz@gmail.com
+					<a
+						href='mailto:cornelius.webdev@gmail.com'
+						className='text-accent'
+					>
+						cornelius.webdev@gmail.com
 					</a>
 				</p>
 
@@ -29,7 +34,7 @@ const ContactSection = () => {
 
 				<SocialLinks
 					IconClass='text-2xl text-accent hover:text-accent-hover'
-					ULClass='flex gap-7 mt-14 mb-18'
+					ULClass='flex gap-7 mt-10 mb-18'
 					size={28}
 				/>
 			</div>

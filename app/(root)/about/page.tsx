@@ -10,8 +10,9 @@ const About = () => {
 				My journey into web development began with a curiosity about how{' '}
 				<em>“The Web”</em> works. As I explored deeper, I didn't just find
 				answers; I fell in love with the craft itself. What started as
-				casual exploration quickly grew into a passion, then commitment to mastering the
-				tools and principles that power modern web experiences.
+				casual exploration quickly grew into a passion, then commitment to
+				mastering the tools and principles that power modern web
+				experiences.
 			</p>
 
 			<p className='leading-7 tracking-wide mt-4'>
@@ -43,8 +44,10 @@ const About = () => {
 				</li>
 				<li>
 					<strong>Minimalism:</strong> Building websites with{' '}
-					<em className='text-accent'>only what's essential</em>,
-					resulting in simple, fast, and reliable performance.
+					<em>
+						<strong>only what's essential</strong>
+					</em>
+					, resulting in simple, fast, and reliable performance.
 				</li>
 				<li>
 					<strong>User Experience:</strong> Designing intuitive interfaces

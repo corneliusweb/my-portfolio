@@ -33,6 +33,9 @@ const ContactForm = () => {
 		}
 	};
 
+	// prohibited contact names
+	const bannedNames = ['johndoe', 'janedoe', 'test', 'unknown', 'admin'];
+
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<div
@@ -46,10 +49,12 @@ const ContactForm = () => {
 					<input
 						{...register('name', {
 							required: 'name is required',
+							setValueAs: (value) => value.trim(),
 							validate: (value) => {
 								if (
-									value.trim().toLowerCase() === 'johndoe' ||
-									'janedoe'
+									bannedNames.includes(
+										value.trim().toLowerCase().replace(/\s+/g, '')
+									)
 								) {
 									return 'Please use a real name!';
 								}
@@ -75,6 +80,7 @@ const ContactForm = () => {
 								value: /^\S+@\S+$/i,
 								message: 'Invalid email address',
 							},
+							setValueAs: (value) => value.trim(),
 							validate: (value) => {
 								if (value.includes('test')) {
 									return 'Please use a real email!';
@@ -92,6 +98,7 @@ const ContactForm = () => {
 					<input
 						{...register('subject', {
 							required: 'subject is required',
+							setValueAs: (value) => value.trim(),
 						})}
 						placeholder='Enter subject'
 						className='peer contact-input'
@@ -104,6 +111,7 @@ const ContactForm = () => {
 						{...register('message', {
 							required: 'message is required',
 							minLength: 5,
+							setValueAs: (value) => value.trim(),
 						})}
 						rows={6}
 						placeholder='Enter your message'
