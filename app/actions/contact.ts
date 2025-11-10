@@ -14,7 +14,7 @@ export const sendContactEmail = async (
 	const subject = formData.get('subject') as string;
 	const message = formData.get('message') as string;
 
-	if (!name.trim() || !email.trim() || !message.trim()) {
+	if (!name || !email || !message) {
 		return { success: false, error: 'Please fill all fields!' };
 	}
 

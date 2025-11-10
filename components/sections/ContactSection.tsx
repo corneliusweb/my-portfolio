@@ -5,11 +5,11 @@ import SocialLinks from '../SocialLinks';
 const ContactSection = ({ intro }: { intro?: string }) => {
 	return (
 		<section className='tracking-wide leading-7'>
-			<div>
+			<div className='mb-15'>
 				<h2 className='section-heading'>Let's Connect</h2>
 
 				{intro && <p className='mb-3'>{intro}</p>}
-				
+
 				<p>
 					Say hello at{' '}
 					<a
@@ -34,9 +34,14 @@ const ContactSection = ({ intro }: { intro?: string }) => {
 
 				<SocialLinks
 					IconClass='text-2xl text-accent hover:text-accent-hover'
-					ULClass='flex gap-7 mt-10 mb-18'
+					ULClass='flex gap-7 my-5'
 					size={28}
 				/>
+
+				<p>
+					I read every message and truly appreciate people reaching out.
+					Let's build something great together!
+				</p>
 			</div>
 
 			<ContactForm />
