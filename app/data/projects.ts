@@ -1,5 +1,5 @@
 import type { Project } from '../types';
-import { spaceTourism, creditCard } from '@/public/images';
+import { spaceTourism, creditCard, sneakers, todoApp } from '@/public/images';
 
 export const projects: Project[] = [
 	{
@@ -33,6 +33,20 @@ export const projects: Project[] = [
 		role: 'Frontend Developer',
 	},
 	{
+		id: 'todo-app',
+		name: 'Todo List App',
+		description:
+			'A responsive form project that updates card details in real-time.',
+		challenge: [],
+		solution: '',
+		image: todoApp,
+		liveURL: 'https://cornelius-react-exam.vercel.app',
+		githubURL: 'https://github.com/corneliusweb/cornelius-react-exam',
+		techStacks: ['Vite', 'React', 'JavaScript', 'Tailwind', 'Zod'],
+		date: '2025',
+		role: 'Frontend Developer',
+	},
+	{
 		id: 'sneakers',
 		name: 'E-commerce Product Page',
 		description:
@@ -53,7 +67,7 @@ export const projects: Project[] = [
 		],
 		solution:
 			'Structured the project with reusable components and centralized product data to make future expansion easy.',
-		image: creditCard,
+		image: sneakers,
 		liveURL: 'https://cornelius-sneakers.vercel.app',
 		githubURL: 'https://github.com/corneliusweb/sneakers',
 		techStacks: ['Vite', 'React', 'TypeScript', 'Tailwind'],
@@ -76,20 +90,6 @@ export const projects: Project[] = [
 		image: creditCard,
 		liveURL: 'https://cornelius-cards.vercel.app',
 		githubURL: 'https://github.com/corneliusweb/credit-card',
-		techStacks: ['Vite', 'React', 'JavaScript', 'Tailwind', 'Zod'],
-		date: '2025',
-		role: 'Frontend Developer',
-	},
-	{
-		id: 'todo-app',
-		name: 'Todo List App',
-		description:
-			'A responsive form project that updates card details in real-time.',
-		challenge: [],
-		solution: '',
-		image: creditCard,
-		liveURL: 'https://cornelius-react-exam.vercel.app',
-		githubURL: 'https://github.com/corneliusweb/cornelius-react-exam',
 		techStacks: ['Vite', 'React', 'JavaScript', 'Tailwind', 'Zod'],
 		date: '2025',
 		role: 'Frontend Developer',
