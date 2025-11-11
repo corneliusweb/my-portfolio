@@ -4,6 +4,7 @@ import { spaceTourism, creditCard, sneakers, todoApp } from '@/public/images';
 export const projects: Project[] = [
 	{
 		id: 'space-tourism',
+		category: 'Design',
 		name: 'Space Tourism Website',
 		description:
 			'A multi-page responsive space tourism website with dynamic routing and tab navigation.',
@@ -34,6 +35,7 @@ export const projects: Project[] = [
 	},
 	{
 		id: 'todo-app',
+		category: 'Development',
 		name: 'Todo List App',
 		description:
 			'A responsive form project that updates card details in real-time.',
@@ -48,6 +50,7 @@ export const projects: Project[] = [
 	},
 	{
 		id: 'sneakers',
+		category: 'Design',
 		name: 'E-commerce Product Page',
 		description:
 			'Dynamic product display with add to lightbox, cart functionality and responsive design.',
@@ -76,9 +79,10 @@ export const projects: Project[] = [
 	},
 	{
 		id: 'credit-card',
+		category: 'Design',
 		name: 'Interactive Card Details Form',
 		description:
-			'A responsive form project that updates card details in real-time.',
+			'A responsive form project that validates input data and updates card details or errors in real-time.',
 		challenge: [
 			'Fill in the form and see the card details update in real-time',
 			'Receive error messages when inputs are empty or invalid',

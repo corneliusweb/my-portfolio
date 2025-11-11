@@ -20,68 +20,72 @@ const FeaturedProjects = () => {
 						githubURL,
 						techStacks,
 					}) => (
-						<figure
-							key={id}
-							className='bg-card p-4 sm:p-6 rounded-md space-y-6 border-2 border-accent-dark/10'
-						>
-							<Image
-								src={image}
-								alt={`${name} screenshot`}
-								loading='lazy'
-								className='rounded-md'
-							/>
+						<article key={id}>
+							<figure className='bg-card p-4 sm:p-6 rounded-md space-y-6 border-2 border-accent-dark/10'>
+								<Image
+									src={image}
+									alt={`${name} screenshot`}
+									loading='lazy'
+									className='rounded-md'
+								/>
 
-							<figcaption>
-								<h3 className='text-lg uppercase tracking-wider font-medium font-grotesk'>
-									{name}
-								</h3>
+								<figcaption>
+									<h3 className='text-lg uppercase tracking-wider font-medium font-grotesk'>
+										{name}
+									</h3>
 
-								<p className='my-2 text-white/55 sm:tracking-wide text-pretty'>
-									{description}
-								</p>
+									<p className='my-2 text-white/55 sm:tracking-wide text-pretty'>
+										{description}
+									</p>
 
-								<div className='flex gap-6 items-center mt-4 mb-12'>
-									<a
-										target='_blank'
-										href={liveURL}
-										className='fp-links gap-0.5 group'
+									<div className='flex gap-6 items-center mt-4 mb-12'>
+										<a
+											target='_blank'
+											href={liveURL}
+											rel='noopener noreferrer'
+											className='fp-links gap-0.5 group'
+										>
+											Live Demo
+											<LuArrowUpRight
+												size={24}
+												className='group-hover:animate-pulse'
+											/>
+										</a>
+
+										<a
+											target='_blank'
+											href={githubURL}
+											rel='noopener noreferrer'
+											className='fp-links gap-2 group'
+										>
+											GitHub
+											<SiGithub
+												size={18}
+												className='group-hover:animate-pulse'
+											/>
+										</a>
+									</div>
+
+									<div
+										aria-label='Technologies used'
+										className='flex items-center gap-2 flex-wrap'
 									>
-										Live Demo
-										<LuArrowUpRight
-											size={24}
-											className='group-hover:animate-pulse'
-										/>
-									</a>
+										<span className='sr-only'>Tech stacks</span>
 
-									<a
-										target='_blank'
-										href={githubURL}
-										className='fp-links gap-2 group'
-									>
-										GitHub
-										<SiGithub
-											size={18}
-											className='group-hover:animate-pulse'
-										/>
-									</a>
-								</div>
-
-								<div className='flex items-center gap-2 flex-wrap'>
-									<span className='sr-only'>Tech stacks</span>
-
-									<ul className='flex flex-wrap gap-2 w-full'>
-										{techStacks.map((tech) => (
-											<li
-												key={tech}
-												className='inline border-2 border-accent/35 cursor-default px-3 py-1 rounded-full text-sm tracking-wide hover:border-accent-hover hover:bg-accent/10 text-white/70 transition-colors duration-150 ease-linear'
-											>
-												{tech}
-											</li>
-										))}
-									</ul>
-								</div>
-							</figcaption>
-						</figure>
+										<ul className='flex flex-wrap gap-2 w-full'>
+											{techStacks.map((tech) => (
+												<li
+													key={tech}
+													className='inline border-2 border-accent/35 cursor-default px-3 py-1 rounded-full text-sm tracking-wide hover:border-accent-hover hover:bg-accent/10 text-white/70 transition-colors duration-150 ease-linear'
+												>
+													{tech}
+												</li>
+											))}
+										</ul>
+									</div>
+								</figcaption>
+							</figure>
+						</article>
 					)
 				)}
 			</div>

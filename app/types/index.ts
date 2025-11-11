@@ -3,6 +3,7 @@ import type { IconType } from 'react-icons';
 
 export interface Project {
 	id: string;
+	category: string;
 	name: string;
 	image: StaticImageData;
 	description: string;

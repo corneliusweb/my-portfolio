@@ -40,7 +40,7 @@
 
 	/* Core Colors */
 	--color-page-bg: #0a0a0a;
-	--color-page-txt: #f1f1f1;
+	--color-page-txt: #c7c7c7;
 
 	/* Accent */
 	--color-accent: #ffb86b; /* Warm orange */
@@ -56,7 +56,6 @@
 
 	/* Typography */
 	--color-heading: #fafafa;
-	--color-text-body: #c7c7c7;
 	--color-text-muted: #9a9a9a; /* For less important text */
 	--color-text-accent: #ffb86b; /* For highlighted text */
 
@@ -68,6 +67,8 @@
 
 	/* Skills section sizing */
 	--max-width-icon-container: 54rem;
+	--width-para-length: 70ch;
+	--max-width-page-max: 90rem;
 }
 
 @layer components {
@@ -119,6 +120,15 @@
 	.section-subheading {
 		@apply mb-2.5 mt-8 text-2xl font-semibold uppercase;
 	}
+
+	.project-card-link {
+		@apply text-accent inline-flex items-center gap-1 underline underline-offset-3 hover:no-underline;
+	}
 }
 
+@layer utilities {
+	.flex-between {
+		@apply flex justify-between items-center;
+	}
+}
 /* REMINDER: Make some cool stuffs with clip-path */

@@ -6,7 +6,7 @@ export default function RootLayout({
 	return (
 		<>
 			<Header />
-			<main className='grid gap-20 px-6 mt-30 mb-12 selection:bg-accent-dark/10 selection:text-accent'>
+			<main className='grid gap-20 px-6 mt-30 mb-12 selection:bg-accent-dark/10 selection:text-accent max-w-page-max mx-auto'>
 				{children}
 			</main>
 		</>

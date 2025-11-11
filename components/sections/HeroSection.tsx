@@ -29,7 +29,7 @@ const HeroSection = () => {
 						<span>Get In Touch</span>
 						<LuArrowUpRight
 							size={24}
-							className='bg-card text-text-body w-9 h-9 p-1.5 rounded-full'
+							className='bg-card text-page-txt w-9 h-9 p-1.5 rounded-full'
 						/>
 					</a>
 
