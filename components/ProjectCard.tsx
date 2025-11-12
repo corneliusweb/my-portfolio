@@ -14,8 +14,8 @@ const ProjectCard = ({
 	role,
 }: Project) => {
 	return (
-		<article className='leading-7 lg:flex lg:justify-between lg:items-center lg:gap-12'>
-			<figure className='w-full lg:w-md xl:w-xl'>
+		<article className='leading-7 lg:flex lg:justify-between lg:items-center lg:gap-15'>
+			<figure className='flex-1'>
 				<div className='rounded-md bg-card p-6 mb-8 border border-accent/10 sm:p-10'>
 					<Image
 						src={image}
@@ -26,7 +26,7 @@ const ProjectCard = ({
 				</div>
 			</figure>
 
-			<section className='lg:w-md xl:w-lg'>
+			<section className='flex-1'>
 				<h2 className='font-grotesk tracking-wide text-2xl mb-0.5'>
 					{name}
 				</h2>
@@ -49,23 +49,26 @@ const ProjectCard = ({
 						href={liveURL}
 						target='_blank'
 						rel='noopener noreferrer'
-						className='project-card-link'
+						className='x-link group'
 					>
 						View Live
-						<LuExternalLink />
+						<LuExternalLink className='group-hover:animate-pulse' />
 					</a>
 					<a
 						href={githubURL}
 						target='_blank'
 						rel='noopener noreferrer'
-						className='project-card-link'
+						className='x-link group'
 					>
 						View Code
-						<LuGithub />
+						<LuGithub className='group-hover:animate-pulse' />
 					</a>
-					<Link href={`/projects/${id}`} className='project-card-link'>
+					<Link href={`/projects/${id}`} className='x-link group'>
 						Project Details
-						<LuArrowRight size={20} />
+						<LuArrowRight
+							size={20}
+							className='group-hover:animate-pulse'
+						/>
 					</Link>
 				</div>
 			</section>

@@ -67,7 +67,7 @@
 
 	/* Skills section sizing */
 	--max-width-icon-container: 54rem;
-	--width-para-length: 70ch;
+	--max-width-para-length: 70ch;
 	--max-width-page-max: 90rem;
 }
 
@@ -92,8 +92,9 @@
 		@apply text-accent-dark animate-pulse block -z-5 md:text-6xl;
 	}
 
-	.fp-links {
-		@apply text-accent transition-colors duration-150 ease-in-out flex items-center underline underline-offset-5 decoration-2 font-bold uppercase text-sm hover:text-accent-hover;
+	/* all links with text and icon */
+	.x-link {
+		@apply text-accent inline-flex items-center gap-1 underline underline-offset-3 hover:no-underline transition-colors duration-150 ease-in-out hover:text-accent-hover;
 	}
 
 	.contact-input {
@@ -121,8 +122,8 @@
 		@apply mb-2.5 mt-8 text-2xl font-semibold uppercase;
 	}
 
-	.project-card-link {
-		@apply text-accent inline-flex items-center gap-1 underline underline-offset-3 hover:no-underline;
+	.lg-section-wrapper {
+		@apply lg:flex lg:gap-15 lg:items-center;
 	}
 }
 

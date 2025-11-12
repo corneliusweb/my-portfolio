@@ -1,9 +1,10 @@
 import type { Project } from '../types';
-import { spaceTourism, creditCard } from '@/public/images';
+import { spaceTourism, todoApp } from '@/public/images';
 
 export const featuredProjects: Project[] = [
 	{
 		id: 'space-tourism',
+		category: 'Design',
 		name: 'Space Tourism Website',
 		description:
 			'A multi-page responsive website with tab navigation and swipe support for mobile.',
@@ -19,13 +20,20 @@ export const featuredProjects: Project[] = [
 		],
 	},
 	{
-		id: 'credit-card',
-		name: 'Interactive Card Details Form',
+		id: 'todo-app',
+		category: 'Development',
+		name: 'Todo List App',
 		description:
-			'A responsive form project that updates and validates card details in real-time.',
-		image: creditCard,
-		liveURL: 'https://cornelius-cards.vercel.app',
-		githubURL: 'https://github.com/corneliusweb/credit-card',
-		techStacks: ['React', 'TypeScript', 'Zod', 'Tailwind CSS'],
+			'A responsive todo app with login/signup authentication system, populated with dummy data from DummyJSON API.',
+		image: todoApp,
+		liveURL: 'https://cornelius-todo-app-nextjs.vercel.app/',
+		githubURL: 'https://github.com/corneliusweb/todo-app-monorepo',
+		techStacks: [
+			'Next.js',
+			'Firebase',
+			'TypeScript',
+			'Tailwind',
+			'Tanstack Query',
+		],
 	},
 ];

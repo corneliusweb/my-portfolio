@@ -4,8 +4,8 @@ import SocialLinks from '../SocialLinks';
 
 const ContactSection = ({ intro }: { intro?: string }) => {
 	return (
-		<section className='tracking-wide leading-7'>
-			<div className='mb-15'>
+		<section className='tracking-wide leading-7 lg:flex lg:gap-12 lg:items-center'>
+			<div className='mb-15 lg:flex-1 lg:mb-0'>
 				<h2 className='section-heading'>Let's Connect</h2>
 
 				{intro && <p className='mb-3'>{intro}</p>}
@@ -20,15 +20,16 @@ const ContactSection = ({ intro }: { intro?: string }) => {
 					</a>
 				</p>
 
-				<p className='flex gap-1'>
+				<p>
 					For more information,
 					<a
 						href='/documents/my-resume.pdf'
 						download='Resume - Cornelius Asogwa'
-						className='flex items-center gap-1.5 text-accent'
+						className='text-accent'
 					>
+						{' '}
 						download my resume here
-						<LuDownload />
+						<LuDownload className='ml-1 inline-flex' />
 					</a>
 				</p>
 
@@ -44,7 +45,9 @@ const ContactSection = ({ intro }: { intro?: string }) => {
 				</p>
 			</div>
 
-			<ContactForm />
+			<div className='flex-1'>
+				<ContactForm />
+			</div>
 		</section>
 	);
 };

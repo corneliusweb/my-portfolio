@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 const HeroSection = () => {
 	return (
-		<section>
-			<div>
+		<section className='lg-section-wrapper'>
+			<div className='flex-1'>
 				<p className='text-base text-page-txt/50 uppercase tracking-wide'>
 					Hi, I am Cornelius 👋
 				</p>
@@ -15,9 +15,9 @@ const HeroSection = () => {
 					Frontend Developer
 				</h1>
 
-				<p className='text-lg tracking-wide text-page-txt/70 my-6 text-pretty'>
-					I build full-stack web applications with Next.js, React,
-					TypeScript, and Firebase; delivering fast and accessible user
+				<p className='text-lg tracking-wide text-page-txt/70 my-6 max-w-para-length'>
+					I build full-stack web applications with Next.js, Firebase,
+					React, and TypeScript; delivering fast and accessible user
 					experiences.
 				</p>
 
@@ -34,7 +34,7 @@ const HeroSection = () => {
 					</a>
 
 					<SocialLinks
-						show={['email', 'x', 'facebook']}
+						show={['email', 'x']}
 						size={24}
 						IconClass='text-accent group-hover:text-accent-hover'
 						LinkClass='cta-btn group'
@@ -43,12 +43,14 @@ const HeroSection = () => {
 				</div>
 			</div>
 
-			<Image
-				src={profile}
-				alt='Cornelius - Frontend Developer'
-				className='sm:rounded-md mt-15'
-				priority
-			/>
+			<div className='mt-15 flex-1'>
+				<Image
+					src={profile}
+					alt='Cornelius - Frontend Developer'
+					className='sm:rounded-md'
+					priority
+				/>
+			</div>
 		</section>
 	);
 };

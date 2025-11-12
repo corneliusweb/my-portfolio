@@ -41,7 +41,7 @@ const Header = () => {
 	}, [isNavOpen]);
 
 	return (
-		<header className='fixed top-0 w-full bg-page-bg'>
+		<header className='fixed top-0 w-full bg-page-bg z-1000'>
 			<div className='border-0 flex justify-between items-center px-4 relative sm:border-b-3 sm:border-b-white/10'>
 				<h1>
 					<Link
@@ -61,25 +61,24 @@ const Header = () => {
 					className='sm:hidden z-50'
 				>
 					<span className='sr-only'>Menu/Close button</span>
-					{isNavOpen ? (
+					{isNavOpen ?
 						<LuSquareX
 							size={35}
 							className='my-6 transition-colors duration-200 ease-linear text-accent hover:fill-accent-hover hover:text-card'
 						/>
-					) : (
-						<LuMenu
+					:	<LuMenu
 							size={35}
 							className='my-6 text-accent hover:accent-accent-dark'
 						/>
-					)}
+					}
 				</button>
 				<nav
 					id='primary-navigation'
 					aria-label='Main navigation'
 					className={`sm:block ${
-						isNavOpen
-							? 'fixed inset-0 min-h-screen flex items-center transition-all duration-300 ease-linear justify-end bg-transparent backdrop-blur-xs w-screen'
-							: 'hidden'
+						isNavOpen ?
+							'fixed inset-0 min-h-screen flex items-center transition-all duration-300 ease-linear justify-end bg-transparent backdrop-blur-xs w-screen'
+						:	'hidden'
 					}`}
 					onClick={handleBackdropClick}
 				>

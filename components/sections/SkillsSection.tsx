@@ -13,16 +13,18 @@ const Skills = () => {
 	];
 
 	return (
-		<section>
-			<h2 className='section-heading'>Skills & Tools</h2>
+		<section className='xl:flex xl:items-center'>
+			<div className='flex-1'>
+				<h2 className='section-heading'>Skills & Tools</h2>
 
-			<p>
-				Here are the technologies I use to design, build, and ship projects
-				efficiently.
-				{/* Reminder to add: ... but I am always ready to learn new stacks  */}
-			</p>
+				<p>
+					Here are the technologies I use to design, build, and ship
+					projects efficiently.
+					{/* Reminder to add: ... but I am always ready to learn new stacks  */}
+				</p>
+			</div>
 
-			<div className='sm:flex  max-w-icon-container mx-auto my-8'>
+			<div className='sm:flex flex-1 max-w-icon-container mx-auto mt-12'>
 				{skillCategories.map(({ title, categories }) => (
 					<div key={title} className='not-last-of-type:mb-4 sm:mb-0'>
 						{/* <h3 className='text-accent-dark mb-2'>{title}</h3> */}
