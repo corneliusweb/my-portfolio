@@ -3,6 +3,7 @@
 import { projects } from '@/app/data/projects';
 import { ProjectCard } from '@/components';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Projects = () => {
 	const categories: string[] = [
@@ -34,7 +35,7 @@ const Projects = () => {
 
 	return (
 		<div className='max-w-7xl xl:min-w-6xl mx-auto'>
-			<section className='leading-7'>
+			<section className='leading-7 mb-10'>
 				<h1 className='section-heading'>Projects</h1>
 
 				<p className='text-page-txt md:w-para-length'>
@@ -44,7 +45,7 @@ const Projects = () => {
 
 			<section className='mx-auto'>
 				<div>
-					<p className='mb-5'>Filter projects by category</p>
+					<p className='mb-6'>Filter projects by category</p>
 
 					<ul className='flex gap-2 items-center flex-wrap space-y-2 sm:space-y-0'>
 						{categories.map((cat) => (
@@ -63,13 +64,35 @@ const Projects = () => {
 						))}
 					</ul>
 				</div>
-				<div className='space-y-15 mt-15'>
-					{filteredProjects.map((project) =>
-						project !== undefined ?
-							<ProjectCard key={project.id} {...project} />
-						:	<p>No project for this category yet</p>
-					)}
-				</div>
+
+				<AnimatePresence mode='wait'>
+					<div className='space-y-15 mt-15'>
+						{filteredProjects.length === 0 && (
+							<motion.div
+								initial={{ opacity: 0, y: 10 }}
+								animate={{ opacity: 1, y: 0 }}
+								exit={{ opacity: 0, y: -10 }}
+								transition={{ duration: 0.5 }}
+							>
+								<p className='text-center mt-60 font-semibold tracking-wide'>
+									No project for this category yet!
+								</p>
+							</motion.div>
+						)}
+
+						{filteredProjects.map((project) => (
+							<motion.div
+								key={project.id}
+								initial={{ opacity: 0, y: 10 }}
+								animate={{ opacity: 1, y: 0 }}
+								exit={{ opacity: 0, y: -10 }}
+								transition={{ duration: 0.5 }}
+							>
+								<ProjectCard {...project} />
+							</motion.div>
+						))}
+					</div>
+				</AnimatePresence>
 			</section>
 		</div>
 	);
