@@ -51,7 +51,7 @@ const Projects = () => {
 						{categories.map((cat) => (
 							<li
 								key={cat}
-								className={`rounded-full transition-all duration-200 ${cat === category ? 'border-1 border-accent bg-accent/12' : ' border-1 border-accent/40 hover:bg-accent/12 hover:border-accent'}`}
+								className={`rounded-md transition-all duration-200 ${cat === category ? 'border-2 border-accent/50 bg-accent/12' : 'border-2 border-accent/15 hover:bg-accent/12 hover:border-accent/50'}`}
 							>
 								<button
 									type='button'

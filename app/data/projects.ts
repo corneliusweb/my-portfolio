@@ -7,7 +7,7 @@ export const projects: Project[] = [
 		category: 'Design',
 		name: 'Space Tourism Website',
 		description:
-			'A multi-page responsive space tourism website with dynamic routing and tab navigation.',
+			'A multi-page responsive space tourism website with dynamic routing, swipe and tab navigation.',
 		challenge: [
 			'Responsive layout for each page depending on screen size',
 			'Hover states for all interactive elements',
@@ -38,13 +38,19 @@ export const projects: Project[] = [
 		category: 'Development',
 		name: 'Todo List App',
 		description:
-			'A responsive form project that updates card details in real-time.',
+			'A responsive todo app with login/signup authentication system, populated with dummy data from DummyJSON API.',
 		challenge: [],
 		solution: '',
 		image: todoApp,
-		liveURL: 'https://cornelius-react-exam.vercel.app',
-		githubURL: 'https://github.com/corneliusweb/cornelius-react-exam',
-		techStacks: ['Vite', 'React', 'JavaScript', 'Tailwind', 'Zod'],
+		liveURL: 'https://cornelius-todo-app-nextjs.vercel.app/',
+		githubURL: 'https://github.com/corneliusweb/todo-app-monorepo',
+		techStacks: [
+			'Next.js',
+			'Firebase',
+			'TypeScript',
+			'Tailwind',
+			'Tanstack Query',
+		],
 		date: '2025',
 		role: 'Frontend Developer',
 	},
@@ -53,7 +59,7 @@ export const projects: Project[] = [
 		category: 'Design',
 		name: 'E-commerce Product Page',
 		description:
-			'Dynamic product display with add to lightbox, cart functionality and responsive design.',
+			'Dynamic product display with lightbox, add to cart functionality and responsive design.',
 		challenge: [
 			'Responsive layout for different screen sizes',
 			'Hover states for interactive elements',
