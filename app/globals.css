@@ -10,6 +10,10 @@
 		text-wrap: pretty;
 	}
 
+	p {
+		max-width: 70ch; /* consistent paragraph length */
+	}
+
 	h1,
 	h2,
 	h3,
@@ -67,7 +71,6 @@
 
 	/* Skills section sizing */
 	--max-width-icon-container: 54rem;
-	--max-width-para-length: 70ch;
 	--max-width-page-max: 90rem;
 }
 

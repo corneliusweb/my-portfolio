@@ -27,13 +27,15 @@ const ProjectCard = ({
 			</figure>
 
 			<section className='flex-1'>
-				<h2 className='font-grotesk tracking-wide text-2xl mb-0.5'>
+				<h2 className='font-grotesk tracking-wide text-2xl mb-1.5'>
 					{name}
 				</h2>
 				<p className='text-page-txt'>{description}</p>
 
 				<section className='my-6 space-y-3.5'>
-					<h3 className='uppercase text-lg font-medium'>Project info</h3>
+					<h3 className='uppercase text-lg font-medium tracking-wide'>
+						Project info
+					</h3>
 					<p className='flex-between border-b border-accent/15 pb-1.5'>
 						<span className='font-medium'>Year</span>
 						<span className='text-page-txt'>{date}</span>

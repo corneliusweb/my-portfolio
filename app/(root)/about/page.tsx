@@ -3,9 +3,23 @@ import { LuArrowUpRight } from 'react-icons/lu';
 
 const About = () => {
 	return (
-		<div className='lg:space-y-10 lg:px-18 xl:px-50'>
+		<div className='space-y-10 lg:px-18 xl:px-50'>
+			<h1 className='section-heading'>About Me</h1>
 			<section className='lg-section-wrapper'>
-				<h1 className='section-subheading  lg:w-65'>My Journey</h1>
+				<p className='leading-7 tracking-wide'>
+					Hi, I'm Cornelius, a passionate Frontend Developer who loves
+					turning ideas into interactive web experiences. I care deeply
+					about simplicity, usability, and building products that not only
+					look great but also perform beautifully. This page gives a little
+					glimpse into my journey, my process, and what drives me as a
+					developer.
+				</p>
+			</section>
+
+			<hr className='text-accent/12' />
+
+			<section className='lg-section-wrapper'>
+				<h2 className='section-subheading  lg:w-65'>My Journey</h2>
 
 				<div className='flex-1'>
 					<p className='leading-7 tracking-wide'>
@@ -20,10 +34,10 @@ const About = () => {
 					<p className='leading-7 tracking-wide mt-4'>
 						Today, I specialize in building full-stack web applications
 						using
-						<strong> Next.js</strong>, <strong>React</strong>,{' '}
-						<strong>TypeScript</strong>, and <strong>Firebase</strong>.
-						I'm passionate about writing clean, maintainable code and
-						creating interfaces that are both visually engaging and highly
+						<strong> Next.js</strong>, <strong>Firebase</strong>,{' '}
+						<strong>React</strong>, and <strong>TypeScript</strong>. I'm
+						passionate about writing clean, maintainable code and creating
+						interfaces that are both visually engaging and highly
 						performant. Every project I build is an opportunity to solve
 						real problems and deliver meaningful value to users.
 					</p>

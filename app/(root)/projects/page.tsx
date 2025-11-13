@@ -38,16 +38,16 @@ const Projects = () => {
 			<section className='leading-7 mb-10'>
 				<h1 className='section-heading'>Projects</h1>
 
-				<p className='text-page-txt md:w-para-length'>
-					{projectDescription[category]}
-				</p>
+				<p className='text-page-txt'>{projectDescription[category]}</p>
 			</section>
 
 			<section className='mx-auto'>
 				<div>
-					<p className='mb-6'>Filter projects by category</p>
+					<p className='mb-6 font-bold tracking-wide'>
+						Filter projects by category
+					</p>
 
-					<ul className='flex gap-2 items-center flex-wrap space-y-2 sm:space-y-0'>
+					<ul className='flex gap-2.5 items-center flex-wrap space-y-2 sm:space-y-0'>
 						{categories.map((cat) => (
 							<li
 								key={cat}
@@ -56,7 +56,7 @@ const Projects = () => {
 								<button
 									type='button'
 									onClick={() => setCategory(cat)}
-									className='px-6 py-2'
+									className='px-4 py-2 text-sm tracking-wide'
 								>
 									{cat}
 								</button>
