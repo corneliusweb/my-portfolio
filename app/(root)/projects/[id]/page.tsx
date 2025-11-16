@@ -1,7 +1,12 @@
 import { projects } from '@/app/data/projects';
 import Link from 'next/link';
 import Image from 'next/image';
-import { LuChevronLeft, LuExternalLink, LuGithub, LuInfo } from 'react-icons/lu';
+import {
+	LuChevronLeft,
+	LuExternalLink,
+	LuGithub,
+	LuInfo,
+} from 'react-icons/lu';
 
 const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 	const { id } = await params;
@@ -32,7 +37,7 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 				Back to Projects
 			</Link>
 
-			<section className='bg-card p-5 rounded-md'>
+			<section className='bg-card max-w-3xl p-5 rounded-md mx-auto lg:p-10'>
 				<figure>
 					<Image
 						src={image}
@@ -41,13 +46,13 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 						className='rounded-md'
 					/>
 
-					<figcaption className='my-4 space-y-3'>
+					<figcaption className='my-4 space-y-4'>
 						<h1 className='text-2xl'>{name}</h1>
 						<p>{description}</p>
 					</figcaption>
 				</figure>
 
-				<div className='my-4 space-y-3.5'>
+				<div className='my-8 space-y-3.5 max-w-3xl mx-auto'>
 					<p className='flex-between border-b border-accent/15 pb-1.5'>
 						<span className='font-medium'>Date</span>
 						<span className='text-page-txt'>{date}</span>
@@ -58,7 +63,7 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 					</p>
 				</div>
 
-				<div className='space-x-3 my-7'>
+				<div className='space-x-3 my-7 lg:mt-16 lg:mb-0 lg:text-center'>
 					<a
 						href={liveURL}
 						target='_blank'
@@ -83,7 +88,7 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 				</div>
 			</section>
 
-			<div className='space-y-9'>
+			<div className='space-y-9 lg:grid lg:grid-cols-2 lg:gap-8 lg:space-y-0'>
 				{challenges && (
 					<section className='project-details-descr-section'>
 						<h3
