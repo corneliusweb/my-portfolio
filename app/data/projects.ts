@@ -8,7 +8,7 @@ export const projects: Project[] = [
 		name: 'Space Tourism Website',
 		description:
 			'A multi-page responsive space tourism website with dynamic routing, swipe and tab navigation.',
-		challenge: [
+		challenges: [
 			'Responsive layout for each page depending on screen size',
 			'Hover states for all interactive elements',
 			'Tab navigation to toggle between different content sections',
@@ -39,7 +39,7 @@ export const projects: Project[] = [
 		name: 'Todo List App',
 		description:
 			'A responsive todo app with login/signup authentication system, populated with dummy data from DummyJSON API.',
-		challenge: [],
+		challenges: [],
 		solution: '',
 		image: todoApp,
 		liveURL: 'https://cornelius-todo-app-nextjs.vercel.app/',
@@ -60,7 +60,7 @@ export const projects: Project[] = [
 		name: 'E-commerce Product Page',
 		description:
 			'Dynamic product display with lightbox, add to cart functionality and responsive design.',
-		challenge: [
+		challenges: [
 			'Responsive layout for different screen sizes',
 			'Hover states for interactive elements',
 			'Lightbox gallery for product images',
@@ -89,7 +89,7 @@ export const projects: Project[] = [
 		name: 'Interactive Card Details Form',
 		description:
 			'A responsive form project that validates input data and updates card details or errors in real-time.',
-		challenge: [
+		challenges: [
 			'Fill in the form and see the card details update in real-time',
 			'Receive error messages when inputs are empty or invalid',
 			'Responsive layout for different devices',

@@ -43,9 +43,9 @@ const Projects = () => {
 
 			<section className='mx-auto'>
 				<div>
-					<p className='mb-6 font-bold tracking-wide'>
+					<h3 className='mb-6 font-bold tracking-wide'>
 						Filter projects by category
-					</p>
+					</h3>
 
 					<ul className='flex gap-2.5 items-center flex-wrap space-y-2 sm:space-y-0'>
 						{categories.map((cat) => (

@@ -8,11 +8,11 @@ export interface Project {
 	image: StaticImageData;
 	description: string;
 	techStacks: string[];
-	challenge?: string[];
+	challenges?: string[];
 	addedFeatures?: string[];
 	solution?: string;
-	liveURL?: string;
-	githubURL?: string;
+	liveURL: string;
+	githubURL: string;
 	date?: string;
 	role?: string;
 }
