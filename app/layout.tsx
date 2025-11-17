@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk, Inter } from 'next/font/google';
 import './globals.css';
-import Toaster from '@/components/Toaster';
+import Toaster from '@/components/client/Toaster';
 
 const geistSans = Space_Grotesk({
 	variable: '--font-geist-sans',

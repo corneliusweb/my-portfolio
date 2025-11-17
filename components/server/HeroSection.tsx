@@ -1,6 +1,6 @@
 import { LuArrowUpRight } from 'react-icons/lu';
 import { corneliusweb } from '@/public/images';
-import SocialLinks from '../SocialLinks';
+import SocialLinks from '../server/SocialLinks';
 import Image from 'next/image';
 
 const HeroSection = () => {

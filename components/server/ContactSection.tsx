@@ -1,6 +1,6 @@
 import { LuDownload } from 'react-icons/lu';
-import ContactForm from '../ContactForm';
-import SocialLinks from '../SocialLinks';
+import ContactForm from '../client/ContactForm';
+import SocialLinks from '../server/SocialLinks';
 
 const ContactSection = ({ intro }: { intro?: string }) => {
 	return (
