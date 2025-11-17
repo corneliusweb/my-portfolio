@@ -3,5 +3,6 @@ import spaceTourism from './space-tourism.jpg';
 import profile from './me-blurred.jpg';
 import sneakers from './sneakers.jpg';
 import todoApp from './todo-app.png';
+import corneliusweb from './corneliusweb.png';
 
-export { creditCard, spaceTourism, profile, sneakers, todoApp };
+export { creditCard, spaceTourism, profile, sneakers, todoApp, corneliusweb };

@@ -1,5 +1,5 @@
 import { LuArrowUpRight } from 'react-icons/lu';
-import { profile } from '@/public/images';
+import { corneliusweb } from '@/public/images';
 import SocialLinks from '../SocialLinks';
 import Image from 'next/image';
 
@@ -43,11 +43,11 @@ const HeroSection = () => {
 				</div>
 			</div>
 
-			<div className='mt-15 flex-1'>
+			<div className='mt-15 flex-1 bg-accent lg:mt-0'>
 				<Image
-					src={profile}
+					src={corneliusweb}
 					alt='Cornelius - Frontend Developer'
-					className='sm:rounded-md'
+					className='sm:rounded-md w-full lg:max-w-xl mx-auto'
 					priority
 				/>
 			</div>
