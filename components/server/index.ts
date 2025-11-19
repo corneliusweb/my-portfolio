@@ -6,3 +6,4 @@ export { default as FeaturedProjectsSection } from './FeaturedProjectsSection';
 export { default as ProjectCard } from './ProjectCard';
 export { default as EmailTemplate } from './EmailTemplate';
 export { default as SocialLinks } from './SocialLinks';
+export { default as ProfileCard } from './ProfileCard';

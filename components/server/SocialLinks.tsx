@@ -26,7 +26,7 @@ const SocialLinks = ({
 						<a
 							href={href}
 							className={LinkClass}
-							target={target && target}
+							target={target}
 							rel={rel}
 							title={title}
 							aria-label={ariaLabel}

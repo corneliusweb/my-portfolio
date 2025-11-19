@@ -4,7 +4,7 @@ import SocialLinks from '../server/SocialLinks';
 
 const ContactSection = ({ intro }: { intro?: string }) => {
 	return (
-		<section className='tracking-wide leading-7 lg:flex lg:gap-12 lg:items-center'>
+		<section id='contact' className='tracking-wide leading-7 lg:flex lg:gap-12 lg:items-center'>
 			<div className='mb-15 lg:flex-1 lg:mb-0'>
 				<h2 className='section-heading'>Let's Connect</h2>
 

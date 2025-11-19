@@ -1,7 +1,8 @@
 import { LuArrowUpRight } from 'react-icons/lu';
-import { corneliusweb } from '@/public/images';
+// import { corneliusweb } from '@/public/images';
 import SocialLinks from '../server/SocialLinks';
-import Image from 'next/image';
+// import Image from 'next/image';
+import ProfileCard from '../server/ProfileCard';
 
 const HeroSection = () => {
 	return (
@@ -20,37 +21,9 @@ const HeroSection = () => {
 					React, and TypeScript; delivering fast and accessible user
 					experiences.
 				</p>
-
-				<div className='flex items-center gap-3'>
-					<a
-						href='#contact'
-						className='bg-accent-dark text-page-bg rounded-full flex justify-between items-center w-48 py-1.5 pl-3 pr-1 font-medium text-lg uppercase hover:bg-accent-hover transition-colors duration-150 ease-in-out'
-					>
-						<span>Get In Touch</span>
-						<LuArrowUpRight
-							size={24}
-							className='bg-card text-page-txt w-9 h-9 p-1.5 rounded-full'
-						/>
-					</a>
-
-					<SocialLinks
-						show={['email', 'x']}
-						size={24}
-						IconClass='text-accent group-hover:text-accent-hover'
-						LinkClass='cta-btn group'
-						ULClass='flex gap-2'
-					/>
-				</div>
 			</div>
 
-			<div className='mt-15 flex-1 bg-accent lg:mt-0'>
-				<Image
-					src={corneliusweb}
-					alt='Cornelius - Frontend Developer'
-					className='sm:rounded-md w-full lg:max-w-xl mx-auto'
-					priority
-				/>
-			</div>
+			<ProfileCard />
 		</section>
 	);
 };

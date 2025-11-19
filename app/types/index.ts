@@ -38,7 +38,7 @@ export interface SocialLink {
 export interface SocialLinkProps {
 	show?: string[];
 	LinkClass?: string;
-	IconClass: string;
+	IconClass?: string;
 	ULClass?: string;
 	size?: number;
 }
