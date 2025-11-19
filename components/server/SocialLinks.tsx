@@ -1,5 +1,10 @@
 import { socials } from '@/app/data/social-links';
 import type { SocialLinkProps } from '@/app/types';
+import {
+	HoverCard,
+	HoverCardContent,
+	HoverCardTrigger,
+} from '@/components/ui/hover-card';
 
 const SocialLinks = ({
 	show,
@@ -23,18 +28,19 @@ const SocialLinks = ({
 					icon: Icon,
 				}) => (
 					<li key={id}>
-						<a
-							href={href}
-							className={LinkClass}
-							target={target}
-							rel={rel}
-							title={title}
-							aria-label={ariaLabel}
-						>
-							<span className='sr-only'>{name}</span>{' '}
-							{/* link text for screen readers */}
-							<Icon className={IconClass} size={size} />
-						</a>
+						<HoverCard>
+							<HoverCardTrigger
+								href={href}
+								className={LinkClass}
+								rel={rel}
+								aria-label={ariaLabel}
+							>
+								<span className='sr-only'>{name}</span>{' '}
+								{/* link text for screen readers */}
+								<Icon className={IconClass} size={size} />
+							</HoverCardTrigger>
+							<HoverCardContent>{title}</HoverCardContent>
+						</HoverCard>
 					</li>
 				)
 			)}
