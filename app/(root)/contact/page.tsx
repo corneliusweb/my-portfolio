@@ -1,4 +1,4 @@
-import { ContactSection } from '@/components';
+import { ContactSection } from '@/components/server';
 
 const Contact = () => {
 	const introText =

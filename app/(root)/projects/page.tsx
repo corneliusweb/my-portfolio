@@ -1,7 +1,7 @@
 'use client';
 
 import { projects } from '@/app/data/projects';
-import { ProjectCard } from '@/components';
+import { ProjectCard } from '@/components/server';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -14,6 +14,7 @@ const Projects = () => {
 		'Experiments',
 	];
 
+	// dynamically display project page description based on the category selected
 	const projectDescription: Record<string, string> = {
 		All: 'A collection of projects that highlight my experience building responsive, accessible, and scalable web applications using Next.js, React, TypeScript and Firebase.',
 		Design:
