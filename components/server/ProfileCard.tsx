@@ -11,13 +11,14 @@ import { LuArrowUpRight } from 'react-icons/lu';
 
 const ProfileCard = () => {
 	return (
-		<Card className='w-full text-page-txt lg:max-w-2xl mx-auto rounded-md border-accent/10'>
+		<Card className='w-full flex-1 text-page-txt lg:max-w-2xl mx-auto rounded-md border-accent/10'>
 			<Avatar className='w-30 h-30 self-center mb-5 ring-2 ring-accent'>
 				<AvatarImage src='https://github.com/corneliusweb.png' />
 				<AvatarFallback className='font-bold text-lg text-gray-500 tracking-wider'>
 					CA
 				</AvatarFallback>
 			</Avatar>
+
 			<CardHeader className='text-center'>
 				<CardTitle className='text-lg'>Cornelius Asogwa</CardTitle>
 				<CardDescription className='max-w-[70ch] mx-auto'>
@@ -26,6 +27,7 @@ const ProfileCard = () => {
 					Firebase, React, and TypeScript.
 				</CardDescription>
 			</CardHeader>
+
 			<CardFooter className='mx-auto mt-5 mb-5 flex-col'>
 				<SocialLinks
 					ULClass='flex mb-6'
@@ -33,6 +35,7 @@ const ProfileCard = () => {
 					LinkClass='cta-btn group'
 					size={24}
 				/>
+				
 				<a
 					href='#contact'
 					className='w-full bg-accent-dark p-3 text-page-bg rounded-md inline-flex justify-center items-center font-medium text-lg uppercase hover:bg-accent-hover transition-colors duration-150 ease-in-out'

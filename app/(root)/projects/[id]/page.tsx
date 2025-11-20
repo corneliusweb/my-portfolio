@@ -7,6 +7,11 @@ import {
 	LuGithub,
 	LuInfo,
 } from 'react-icons/lu';
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 	const { id } = await params;
@@ -91,13 +96,17 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 			<div className='space-y-9 lg:grid lg:grid-cols-2 lg:gap-8 lg:space-y-0'>
 				{challenges && (
 					<section className='project-details-descr-section'>
-						<h3
-							title="The project's code challenge"
-							className='project-details-descr-heading group'
-						>
-							Challenge
-							<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
-						</h3>
+						<Tooltip>
+							<TooltipTrigger>
+								<h3 className='project-details-descr-heading group'>
+									Challenge
+									<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
+								</h3>
+							</TooltipTrigger>
+							<TooltipContent>
+								<p>Original project requirements from the brief.</p>
+							</TooltipContent>
+						</Tooltip>
 
 						<ol className='project-details-descr-list list-decimal'>
 							{challenges.map((challenge) => (
@@ -109,13 +118,21 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 
 				{addedFeatures && (
 					<section className='project-details-descr-section'>
-						<h3
-							title='Features outside the challenge that I added.'
-							className='project-details-descr-heading group'
-						>
-							Added Features
-							<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
-						</h3>
+						<Tooltip>
+							<TooltipTrigger>
+								<h3 className='project-details-descr-heading group'>
+									Added Features
+									<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
+								</h3>
+							</TooltipTrigger>
+
+							<TooltipContent>
+								<p>
+									Extra features I built beyond the original
+									requirements/challenge.
+								</p>
+							</TooltipContent>
+						</Tooltip>
 
 						<ol className='project-details-descr-list list-decimal'>
 							{addedFeatures.map((feat) => (
@@ -127,26 +144,42 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 
 				{solution && (
 					<section className='project-details-descr-section'>
-						<h3
-							title='How I approached/solved the challenge.'
-							className='project-details-descr-heading group'
-						>
-							My Solution
-							<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
-						</h3>
+						<Tooltip>
+							<TooltipTrigger>
+								<h3 className='project-details-descr-heading group'>
+									My Solution
+									<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
+								</h3>
+							</TooltipTrigger>
+
+							<TooltipContent>
+								<p>
+									A simple breakdown of my approach and key decision.
+								</p>
+							</TooltipContent>
+						</Tooltip>
+
 						<p className='max-w-lg mx-auto'>{solution}</p>
 					</section>
 				)}
 
 				{techStacks && (
 					<section className='project-details-descr-section'>
-						<h3
-							title='The technologies I used to solve the challenge.'
-							className='project-details-descr-heading group'
-						>
-							Tech Stacks
-							<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
-						</h3>
+						<Tooltip>
+							<TooltipTrigger>
+								<h3
+									title=''
+									className='project-details-descr-heading group'
+								>
+									Tech Stacks
+									<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
+								</h3>
+							</TooltipTrigger>
+							
+							<TooltipContent>
+								<p>The tools and technologies behind the project.</p>
+							</TooltipContent>
+						</Tooltip>
 
 						<ul className='flex flex-wrap gap-2.5 my-3 text-page-txt justify-center items-center list-separator'>
 							{techStacks.map((tech) => (
