@@ -72,6 +72,7 @@ const Header = () => {
 						/>
 					}
 				</button>
+
 				<nav
 					id='primary-navigation'
 					aria-label='Main navigation'
@@ -94,6 +95,7 @@ const Header = () => {
 								Home
 							</Link>
 						</li>
+
 						<li>
 							<Link
 								href='/about'
@@ -104,6 +106,7 @@ const Header = () => {
 								About
 							</Link>
 						</li>
+
 						<li>
 							<Link
 								href='/projects'
@@ -114,6 +117,7 @@ const Header = () => {
 								Projects
 							</Link>
 						</li>
+
 						<li>
 							<Link
 								href='/contact'

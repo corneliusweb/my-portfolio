@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -111,14 +111,13 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+	* {
+		@apply border-border outline-ring/50;
 	}
-  body {
-    @apply bg-background text-foreground;
+	body {
+		@apply bg-background text-foreground;
 	}
 }
-
 
 @layer base {
 	body {
@@ -196,11 +195,11 @@
 
 @layer components {
 	.nav-link {
-		@apply py-4 hover:bg-card hover:text-accent/70 block transition-colors duration-150 ease-in-out sm:hover:border-b sm:hover:border-accent/50 sm:p-6;
+		@apply py-4 hover:bg-card hover:text-accent-hover block transition-colors duration-150 ease-in-out sm:p-6;
 	}
 
 	.active-link {
-		@apply text-accent sm:border-b border-accent;
+		@apply text-accent hover:bg-transparent sm:border-b border-accent hover:text-accent;
 	}
 
 	.cta-btn {
@@ -258,18 +257,18 @@
 	}
 
 	.project-details-descr-list {
-		@apply text-left max-w-lg mx-auto list-inside marker:text-accent marker:text-lg marker:font-bold space-y-4
+		@apply text-left max-w-lg mx-auto list-inside marker:text-accent marker:text-lg marker:font-bold space-y-4;
 	}
 
 	.project-details-descr-icon {
-		@apply text-accent-hover hidden lg:inline
+		@apply text-accent-hover hidden lg:inline;
 	}
 
 	/* project details tech stacks list */
 	.list-separator > *:not(:first-child):before {
-    content: '';
-    @apply inline-block min-h-4 w-0.5 bg-accent/15 mr-2.5 self-start; 
-  }
+		content: '';
+		@apply inline-block min-h-4 w-0.5 bg-accent/15 mr-2.5 self-start;
+	}
 }
 
 @layer utilities {
