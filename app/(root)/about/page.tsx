@@ -3,7 +3,7 @@ import { LuArrowUpRight } from 'react-icons/lu';
 
 const About = () => {
 	return (
-		<div className='space-y-10 lg:px-18 xl:px-50'>
+		<div className='text-center lg:text-left space-y-10 lg:px-18 xl:px-50'>
 			<h1 className='section-heading'>About Me</h1>
 			<section className='lg-section-wrapper'>
 				<p className='leading-7 tracking-wide'>
@@ -56,7 +56,7 @@ const About = () => {
 						approach focuses on:
 					</p>
 
-					<ul className='list-disc pl-6 mt-3 space-y-1.5 marker:text-accent-dark marker:text-lg lg:-ml-2'>
+					<ul className='list-disc text-left pl-6 mt-3 space-y-1.5 marker:text-accent-dark marker:text-lg lg:-ml-2'>
 						<li>
 							<strong>Performance:</strong> Building applications that
 							load fast and run smoothly.

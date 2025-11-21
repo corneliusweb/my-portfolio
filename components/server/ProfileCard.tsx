@@ -28,7 +28,7 @@ const ProfileCard = () => {
 				</CardDescription>
 			</CardHeader>
 
-			<CardFooter className='mx-auto mt-5 mb-5 flex-col'>
+			<CardFooter className='mx-auto my-5 flex-col items-center'>
 				<SocialLinks
 					ULClass='flex mb-6'
 					IconClass='text-accent group-hover:text-accent-hover'
@@ -38,12 +38,12 @@ const ProfileCard = () => {
 				
 				<a
 					href='#contact'
-					className='w-full bg-accent-dark p-3 text-page-bg rounded-md inline-flex justify-center items-center font-medium text-lg uppercase hover:bg-accent-hover transition-colors duration-150 ease-in-out'
+					className='w-full max-w-60 bg-accent-dark p-2 text-page-bg rounded-md inline-flex justify-center items-center font-medium text-md uppercase hover:bg-accent-hover transition-colors duration-150 ease-in-out'
 				>
 					<span>Get In Touch</span>
 					<LuArrowUpRight
 						size={24}
-						className='bg-card text-page-txt w-9 h-9 p-1.5 rounded-full ml-2.5'
+						className='bg-card text-page-txt w-8 h-8 p-1.5 rounded-full ml-2.5'
 					/>
 				</a>
 			</CardFooter>

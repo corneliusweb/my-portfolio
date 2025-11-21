@@ -216,7 +216,7 @@
 
 	/* all links with text and icon */
 	.x-link {
-		@apply text-accent inline-flex items-center gap-1 underline underline-offset-3 hover:no-underline transition-colors duration-150 ease-in-out hover:text-accent-hover;
+		@apply text-accent inline-flex text-sm items-center gap-1 underline underline-offset-3 hover:no-underline transition-colors duration-150 ease-in-out hover:text-accent-hover;
 	}
 
 	.contact-input {

@@ -68,7 +68,7 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 					</p>
 				</div>
 
-				<div className='space-x-3 my-7 lg:mt-16 lg:mb-0 lg:text-center'>
+				<div className='max-w-53 mx-auto space-x-8 my-7 mt-10 lg:mt-16 lg:mb-0 lg:text-center'>
 					<a
 						href={liveURL}
 						target='_blank'
@@ -167,15 +167,12 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 					<section className='project-details-descr-section'>
 						<Tooltip>
 							<TooltipTrigger>
-								<h3
-									title=''
-									className='project-details-descr-heading group'
-								>
+								<h3 className='project-details-descr-heading group'>
 									Tech Stacks
 									<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
 								</h3>
 							</TooltipTrigger>
-							
+
 							<TooltipContent>
 								<p>The tools and technologies behind the project.</p>
 							</TooltipContent>

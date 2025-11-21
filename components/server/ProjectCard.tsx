@@ -30,7 +30,7 @@ const ProjectCard = ({
 				<h2 className='font-grotesk tracking-wide text-2xl mb-1.5'>
 					{name}
 				</h2>
-				<p className='text-page-txt'>{description}</p>
+				<p className='text-page-txt text-base'>{description}</p>
 
 				<section className='my-6 space-y-3.5'>
 					<h3 className='uppercase text-lg font-medium tracking-wide'>
@@ -46,7 +46,7 @@ const ProjectCard = ({
 					</p>
 				</section>
 
-				<div className='space-x-3'>
+				<div className='space-x-3 max-w-79 mx-auto lg:mx-0'>
 					<a
 						href={liveURL}
 						target='_blank'

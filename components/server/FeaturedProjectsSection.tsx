@@ -42,7 +42,7 @@ const FeaturedProjects = () => {
 								{description}
 							</p>
 
-							<div className='flex gap-6 items-center mb-12'>
+							<div className='flex justify-between gap-6 items-center mb-12 lg:justify-start max-w-lg mx-auto lg:mx-0'>
 								<a
 									target='_blank'
 									href={liveURL}
@@ -76,11 +76,11 @@ const FeaturedProjects = () => {
 							>
 								<span className='sr-only'>Tech stacks</span>
 
-								<ul className='flex flex-wrap gap-3 w-full'>
+								<ul className='flex flex-wrap justify-center gap-3 w-full sm:justify-start mx-auto max-w-lg lg:mx-0'>
 									{techStacks.map((tech) => (
 										<li
 											key={tech}
-											className='inline border-2 border-accent/35 cursor-default px-3 py-1 rounded-full text-sm tracking-wide hover:border-accent-hover/50 hover:bg-accent/10 text-white/70 transition-colors duration-150 ease-linear'
+											className='inline border-2 border-accent/35 cursor-default px-3 py-1 rounded-full text-xs tracking-wide hover:border-accent-hover/50 hover:bg-accent/10 text-white/70 transition-colors duration-150 ease-linear'
 										>
 											{tech}
 										</li>

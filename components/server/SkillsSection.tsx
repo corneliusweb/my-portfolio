@@ -28,7 +28,7 @@ const Skills = () => {
 				{skillCategories.map(({ title, categories }) => (
 					<div key={title} className='not-last-of-type:mb-4 sm:mb-0'>
 						{/* <h3 className='text-accent-dark mb-2'>{title}</h3> */}
-						<ul className='flex flex-wrap justify-center space-x-4 lg:space-x-6 md:space-y-5'>
+						<ul className='flex flex-wrap space-y-2 justify-center space-x-4 lg:space-x-6 md:space-y-5'>
 							{getSkillsByCategory(categories).map(
 								({ icon: Icon, id, name }) => {
 									return (

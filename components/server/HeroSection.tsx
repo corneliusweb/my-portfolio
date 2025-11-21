@@ -16,7 +16,7 @@ const HeroSection = () => {
 					Frontend Developer
 				</h1>
 
-				<p className='text-lg tracking-wide text-page-txt/70 my-6'>
+				<p className='md:text-lg sm:tracking-wide text-page-txt/70 my-6'>
 					I build full-stack web applications with Next.js, Firebase,
 					React, and TypeScript; delivering fast and accessible user
 					experiences.

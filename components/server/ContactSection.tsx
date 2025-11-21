@@ -14,7 +14,7 @@ const ContactSection = ({ intro }: { intro?: string }) => {
 					Say hello at{' '}
 					<a
 						href='mailto:cornelius.webdev@gmail.com'
-						className='text-accent'
+						className='text-accent text-sm'
 					>
 						cornelius.webdev@gmail.com
 					</a>
@@ -25,7 +25,7 @@ const ContactSection = ({ intro }: { intro?: string }) => {
 					<a
 						href='/documents/my-resume.pdf'
 						download='Resume - Cornelius Asogwa'
-						className='text-accent'
+						className='text-accent text-sm'
 					>
 						{' '}
 						download my resume here
