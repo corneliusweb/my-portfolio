@@ -39,7 +39,7 @@ export const projects: Project[] = [
 		name: 'Todo List App',
 		description:
 			'A responsive todo app with login/signup authentication system, populated with dummy data from DummyJSON API.',
-		challenges: [],
+		// challenges: [],
 		solution: '',
 		image: todoApp,
 		liveURL: 'https://cornelius-todo-app-nextjs.vercel.app/',

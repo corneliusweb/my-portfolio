@@ -16,13 +16,14 @@ import {
 	SiRedux,
 	SiNextdotjs,
 	SiAxios,
+	SiShadcnui
 } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 import { DiFirebase } from 'react-icons/di';
 
 export const skills: Skill[] = [
-	{ id: 'html', name: 'HTML', category: 'Core', icon: SiHtml5 },
-	{ id: 'css', name: 'CSS', category: 'Core', icon: SiCss3 },
+	{ id: 'html', name: 'HTML5', category: 'Core', icon: SiHtml5 },
+	{ id: 'css', name: 'CSS3', category: 'Core', icon: SiCss3 },
 	{
 		id: 'javaScript',
 		name: 'JavaScript',
@@ -48,6 +49,7 @@ export const skills: Skill[] = [
 	{ id: 'zod', name: 'Zod', category: 'Library', icon: SiZod },
 	{ id: 'redux', name: 'Redux', category: 'Library', icon: SiRedux },
 	{ id: 'axios', name: 'Axios', category: 'Library', icon: SiAxios },
+	{ id: 'shadcnui', name: 'Shadcnui', category: 'Library', icon: SiShadcnui },
 	{
 		id: 'tailwind',
 		name: 'Tailwind CSS',
