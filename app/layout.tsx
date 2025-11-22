@@ -64,7 +64,7 @@ export const metadata: Metadata = {
 			"Hi, I'm Cornelius Asogwa, a frontend developer building accessible fullstack web apps with React, Next.js, TypeScript, and Firebase. Explore my projects and get in touch!",
 		images: [
 			{
-				url: `${siteUrl}/corneliusweb.png`,
+				url: `${siteUrl}/images/corneliusweb.png`,
 				width: 1200,
 				height: 630,
 				alt: 'Cornelius Asogwa - Frontend Developer',
@@ -79,10 +79,11 @@ export const metadata: Metadata = {
 		title: 'Cornelius Asogwa - Frontend Developer',
 		description:
 			"Hi, I'm Cornelius Asogwa, a frontend developer building accessible fullstack web apps with React, Next.js, TypeScript, and Firebase. Explore my projects and get in touch!",
-		images: [`${siteUrl}/corneliusweb.png`],
+		images: [`${siteUrl}/images/corneliusweb.png`],
 	},
 	verification: {
 		google: 'howUca1R_yY51W14dNXBXvFEfEyNL0naLuoh8p-ovu0',
+		yandex: '58f3a22663a1e0d7',
 	},
 	appleWebApp: {
 		capable: true,
