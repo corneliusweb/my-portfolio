@@ -1,4 +1,7 @@
 import { ContactSection } from '@/components/server';
+import { contactMetadata } from '@/lib/metadata';
+
+export const metadata = contactMetadata;
 
 const Contact = () => {
 	const introText =

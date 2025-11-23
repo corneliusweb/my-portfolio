@@ -1,5 +1,8 @@
+import { aboutMetadata } from '@/lib/metadata';
 import Link from 'next/link';
 import { LuArrowUpRight } from 'react-icons/lu';
+
+export const metadata = aboutMetadata;
 
 const About = () => {
 	return (

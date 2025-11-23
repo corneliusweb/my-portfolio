@@ -12,6 +12,21 @@ import {
 	TooltipContent,
 	TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { createProjectMetadata } from '@/lib/metadata';
+
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ id: string }>;
+}) {
+	const { id } = await params;
+
+	const project = projects.find((p) => p.id === id);
+	
+	if (!project) return;
+
+	return createProjectMetadata(project);
+}
 
 const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 	const { id } = await params;
@@ -47,7 +62,7 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 					<Image
 						src={image}
 						alt={`${name} screenshot`}
-						loading='lazy'
+						loading='eager'
 						className='rounded-md'
 					/>
 
