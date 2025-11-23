@@ -14,7 +14,7 @@ const ProjectCard = ({
 	role,
 }: Project) => {
 	return (
-		<article className='leading-7 lg:flex lg:justify-between lg:items-center lg:gap-15'>
+		<article className='leading-7 flex flex-col items-center lg:flex-row lg:justify-between lg:items-center lg:gap-15'>
 			<figure className='flex-1'>
 				<div className='rounded-md bg-card p-6 mb-8 border border-accent/10 sm:p-10'>
 					<Image
