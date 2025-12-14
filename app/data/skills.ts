@@ -16,7 +16,10 @@ import {
 	SiRedux,
 	SiNextdotjs,
 	SiAxios,
-	SiShadcnui
+	SiShadcnui,
+	SiSupabase,
+	SiPrisma,
+	SiPostgresql
 } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 import { DiFirebase } from 'react-icons/di';
@@ -57,6 +60,9 @@ export const skills: Skill[] = [
 		icon: SiTailwindcss,
 	},
 	{ id: 'firebase', name: 'Firebase', category: 'Library', icon: DiFirebase },
+	{ id: 'supabase', name: 'Supabase', category: 'Library', icon: SiSupabase },
+	{ id: 'prisma', name: 'Prisma', category: 'Library', icon: SiPrisma },
+	{ id: 'postgresql', name: 'Postgresql', category: 'Library', icon: SiPostgresql },
 
 	{ id: 'vite', name: 'Vite', category: 'Tool', icon: SiVite },
 	{ id: 'git', name: 'Git', category: 'Tool', icon: SiGit },
