@@ -14,19 +14,18 @@ import {
 } from '@/components/ui/tooltip';
 import { createProjectMetadata } from '@/lib/metadata';
 
-export async function generateMetadata({
+export const generateMetadata = async ({
 	params,
 }: {
 	params: Promise<{ id: string }>;
-}) {
+}) => {
 	const { id } = await params;
 
 	const project = projects.find((p) => p.id === id);
-	
 	if (!project) return;
 
 	return createProjectMetadata(project);
-}
+};
 
 const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 	const { id } = await params;

@@ -3,9 +3,11 @@ import { Metadata } from 'next';
 
 const siteConfig: Record<string, string> = {
 	siteName: 'Cornelius Asogwa',
-	siteTitle: 'Cornelius Asogwa - Frontend Developer',
+	siteTitle: 'Cornelius Asogwa - Web Developer',
 	twitter: '@corneliusweb_',
 	siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+	siteDescription:
+		"Hi, I'm Cornelius Asogwa, a web developer building accessible fullstack web apps with Next.js, Supabase, React, and TypeScript. Explore my projects and get in touch!",
 };
 
 export const baseMetadata: Metadata = {
@@ -13,8 +15,7 @@ export const baseMetadata: Metadata = {
 		template: `%s | ${siteConfig.siteName}`,
 		default: siteConfig.siteTitle,
 	},
-	description:
-		"Hi, I'm Cornelius Asogwa, a frontend developer building accessible fullstack web apps with React, Next.js, TypeScript, and Firebase. Explore my projects and get in touch!",
+	description: siteConfig.siteDescription,
 	alternates: {
 		canonical: siteConfig.siteUrl,
 	},
@@ -42,10 +43,9 @@ export const baseMetadata: Metadata = {
 		type: 'website',
 		locale: 'en_US',
 		url: siteConfig.siteUrl,
-		siteName: 'Cornelius Asogwa Portfolio',
+		siteName: `${siteConfig.siteName} Portfolio`,
 		title: siteConfig.siteTitle,
-		description:
-			"Hi, I'm Cornelius Asogwa, a frontend developer building accessible fullstack web apps with React, Next.js, TypeScript, and Firebase. Explore my projects and get in touch!",
+		description: siteConfig.siteDescription,
 		images: [
 			{
 				url: `${siteConfig.siteUrl}/images/corneliusweb.png`,
@@ -61,13 +61,13 @@ export const baseMetadata: Metadata = {
 		site: siteConfig.twitter,
 		creator: siteConfig.twitter,
 		title: siteConfig.siteTitle,
-		description:
-			"Hi, I'm Cornelius Asogwa, a frontend developer building accessible fullstack web apps with React, Next.js, TypeScript, and Firebase. Explore my projects and get in touch!",
+		description: siteConfig.siteDescription,
 		images: [`${siteConfig.siteUrl}/images/corneliusweb.png`],
 	},
 	verification: {
 		google: 'howUca1R_yY51W14dNXBXvFEfEyNL0naLuoh8p-ovu0',
 		yandex: '58f3a22663a1e0d7',
+		// Bing was verified using Google through import
 	},
 	appleWebApp: {
 		capable: true,
@@ -76,9 +76,11 @@ export const baseMetadata: Metadata = {
 	},
 	category: 'technology',
 	keywords: [
+		siteConfig.siteName,
 		'frontend developer',
 		'front-end developer',
 		'web developer',
+		'web designer',
 		'React developer',
 		'Next.js developer',
 		'Next developer',
@@ -86,7 +88,7 @@ export const baseMetadata: Metadata = {
 		'TypeScript',
 		'Firebase',
 		'portfolio',
-		'Cornelius Asogwa',
+		'cornelius asogwa',
 		'fullstack developer',
 		'accessible web apps',
 		'fullstack web apps',
@@ -132,11 +134,10 @@ export const contactMetadata: Metadata = {
 	},
 };
 
-export function createProjectMetadata(project: Project) {
-   // create project titles from the project id
+export const createProjectMetadata = (project: Project) => {
+	// create project titles from the project id
 	const createTitle = () => {
 		const { id: projectName } = project;
-
 		if (projectName.includes('-')) {
 			return projectName
 				.split('-')
@@ -146,15 +147,16 @@ export function createProjectMetadata(project: Project) {
 			return (projectName.at(0)?.toUpperCase() ?? '') + projectName.slice(1);
 		}
 	};
+
 	return {
 		title: `${createTitle()} | ${siteConfig.siteName}`,
 		description: project.description,
 
 		openGraph: {
-			title: `${project.id} - Project by ${siteConfig.siteName}`,
+			title: `${createTitle()} - Project by ${siteConfig.siteName}`,
 			description: project.description,
 			url: `${siteConfig.siteUrl}/projects/${project.id}`,
 			type: 'article' as const,
 		},
 	};
-}
+};

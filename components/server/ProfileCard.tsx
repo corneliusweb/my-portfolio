@@ -13,7 +13,7 @@ const ProfileCard = () => {
 	return (
 		<Card className='w-full flex-1 text-page-txt lg:max-w-2xl mx-auto rounded-md border-accent/10'>
 			<Avatar className='w-30 h-30 self-center mb-5 ring-2 ring-accent'>
-				<AvatarImage src='https://github.com/corneliusweb.png' />
+				<AvatarImage src='https://github.com/corneliusweb.png' alt='profile avatar' />
 				<AvatarFallback className='font-bold text-lg text-gray-500 tracking-wider'>
 					CA
 				</AvatarFallback>
