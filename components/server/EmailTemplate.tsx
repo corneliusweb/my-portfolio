@@ -1,5 +1,5 @@
 import { ContactFormData } from '@/app/types';
-import { Html, Body, Container, Text, Heading } from '@react-email/components';
+import { Html, Body, Container, Text, Heading } from 'react-email';
 
 const EmailTemplate = ({ name, subject, email, message }: ContactFormData) => {
 	return (
