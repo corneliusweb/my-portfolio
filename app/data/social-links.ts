@@ -1,5 +1,5 @@
-import { SiFacebook, SiGithub, SiLinkedin, SiX } from 'react-icons/si';
-import { TfiEmail } from 'react-icons/tfi';
+import { SiFacebook, SiGithub, SiLinkerd, SiX } from 'react-icons/si';
+import { TfiEmail, TfiLinkedin } from 'react-icons/tfi';
 import type { SocialLink } from '../types';
 
 export const socials: SocialLink[] = [
@@ -40,7 +40,7 @@ export const socials: SocialLink[] = [
 		rel: 'noopener noreferrer',
 		title: 'Connect on LinkedIn',
 		'aria-label': 'LinkedIn',
-		icon: SiLinkedin,
+		icon: TfiLinkedin,
 	},
 	{
 		id: 'facebook',

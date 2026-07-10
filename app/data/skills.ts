@@ -4,7 +4,7 @@ import UnheadIcon from '@/icons/UnheadIcon';
 import {
 	SiReact,
 	SiHtml5,
-	SiCss3,
+	SiCss,
 	SiJavascript,
 	SiTypescript,
 	SiTailwindcss,
@@ -26,7 +26,7 @@ import { DiFirebase } from 'react-icons/di';
 
 export const skills: Skill[] = [
 	{ id: 'html', name: 'HTML5', category: 'Core', icon: SiHtml5 },
-	{ id: 'css', name: 'CSS3', category: 'Core', icon: SiCss3 },
+	{ id: 'css', name: 'CSS3', category: 'Core', icon: SiCss },
 	{
 		id: 'javaScript',
 		name: 'JavaScript',
