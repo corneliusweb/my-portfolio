@@ -3,11 +3,11 @@ import { Metadata } from 'next';
 
 const siteConfig: Record<string, string> = {
 	siteName: 'Cornelius Asogwa',
-	siteTitle: 'Cornelius Asogwa - Web Developer',
-	twitter: '@corneliusweb_',
+	siteTitle: 'Cornelius Asogwa - Fullstack Developer',
+	twitter: '@iamdevcornelius',
 	siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
 	siteDescription:
-		"Hi, I'm Cornelius Asogwa, a web developer building accessible fullstack web apps with Next.js, Supabase, React, and TypeScript. Explore my projects and get in touch!",
+		"Hi, I'm Cornelius Asogwa, a curious developer building ultra-fast modern & accessible fullstack web apps with Next.js, Supabase, React, and TypeScript. Explore my projects and get in touch!",
 };
 
 export const baseMetadata: Metadata = {
@@ -25,9 +25,9 @@ export const baseMetadata: Metadata = {
 		googleBot: {
 			index: true,
 			follow: true,
-			'max-image-preview': 'large',
-			'max-video-preview': -1,
-			'max-snippet': -1,
+			"max-image-preview": "large",
+			"max-video-preview": -1,
+			"max-snippet": -1,
 		},
 	},
 	authors: [{ name: siteConfig.siteName, url: siteConfig.siteUrl }],
@@ -40,8 +40,8 @@ export const baseMetadata: Metadata = {
 		address: true,
 	},
 	openGraph: {
-		type: 'website',
-		locale: 'en_US',
+		type: "website",
+		locale: "en_US",
 		url: siteConfig.siteUrl,
 		siteName: `${siteConfig.siteName} Portfolio`,
 		title: siteConfig.siteTitle,
@@ -52,12 +52,12 @@ export const baseMetadata: Metadata = {
 				width: 1200,
 				height: 630,
 				alt: siteConfig.siteTitle,
-				type: 'image/png',
+				type: "image/png",
 			},
 		],
 	},
 	twitter: {
-		card: 'summary_large_image',
+		card: "summary_large_image",
 		site: siteConfig.twitter,
 		creator: siteConfig.twitter,
 		title: siteConfig.siteTitle,
@@ -65,47 +65,50 @@ export const baseMetadata: Metadata = {
 		images: [`${siteConfig.siteUrl}/images/corneliusweb.png`],
 	},
 	verification: {
-		google: 'howUca1R_yY51W14dNXBXvFEfEyNL0naLuoh8p-ovu0',
-		yandex: '58f3a22663a1e0d7',
+		google: "howUca1R_yY51W14dNXBXvFEfEyNL0naLuoh8p-ovu0",
+		yandex: "c9ee55639cd532ef",
 		// Bing was verified using Google through import
 	},
 	appleWebApp: {
 		capable: true,
 		title: siteConfig.siteName,
-		statusBarStyle: 'black-translucent',
+		statusBarStyle: "black-translucent",
 	},
-	category: 'technology',
+	category: "technology",
 	keywords: [
 		siteConfig.siteName,
-		'frontend developer',
-		'front-end developer',
-		'web developer',
-		'web designer',
-		'React developer',
-		'Next.js developer',
-		'Next developer',
-		'JavaScript',
-		'TypeScript',
-		'Firebase',
-		'portfolio',
-		'cornelius asogwa',
-		'fullstack developer',
-		'accessible web apps',
-		'fullstack web apps',
+		"fast website",
+		"frontend developer",
+		"front-end developer",
+		"web developer",
+		"web designer",
+		"React developer",
+		"Next.js developer",
+		"Next developer",
+		"JavaScript",
+		"TypeScript",
+		"Firebase",
+		"portfolio",
+		"cornelius asogwa",
+		"fullstack developer",
+		"accessible web apps",
+		"fullstack web apps",
+		"modern website",
+		"affordable developer",
 	],
 	other: {
-		google: 'notranslate',
+		google: "notranslate",
 	},
 };
 
 export const aboutMetadata: Metadata = {
 	title: 'About Me',
 	description:
-		'Learn about Cornelius Asogwa - my journey as a frontend developer, technical skills, and work experience.',
+		'Learn about Cornelius Asogwa - my journey as a fullstack developer, technical skills, and work experience.',
 
 	openGraph: {
 		title: `About ${siteConfig.siteName}`,
-		description: 'Learn about my journey as a frontend developer.',
+		description: 'Learn about my journey as a fullstack developer.',
 		url: `${siteConfig.siteUrl}/about`,
 	},
 };
@@ -113,7 +116,7 @@ export const aboutMetadata: Metadata = {
 export const projectsMetadata: Metadata = {
 	title: 'Projects',
 	description:
-		'Explore my portfolio of web development projects including React applications, Next.js websites, and Firebase apps.',
+		'Explore my portfolio of web development projects including React applications, Next.js websites, and Supabase powered apps.',
 
 	openGraph: {
 		title: `Projects by ${siteConfig.siteName}`,
