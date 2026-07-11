@@ -1,18 +1,18 @@
-import { projects } from '@/app/data/projects';
-import Link from 'next/link';
-import Image from 'next/image';
+import { projects } from "@/app/data/projects";
+import Link from "next/link";
+import Image from "next/image";
 import {
 	LuChevronLeft,
 	LuExternalLink,
 	LuGithub,
 	LuInfo,
-} from 'react-icons/lu';
+} from "react-icons/lu";
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipTrigger,
-} from '@/components/ui/tooltip';
-import { createProjectMetadata } from '@/lib/metadata';
+} from "@/components/ui/tooltip";
+import { createProjectMetadata } from "@/lib/metadata";
 
 export const generateMetadata = async ({
 	params,
@@ -50,71 +50,71 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 	} = project;
 
 	return (
-		<article className='tracking-wide leading-7 space-y-12'>
-			<Link href={'/projects'} className='x-link group'>
-				<LuChevronLeft size={24} className='group-hover:animate-pulse' />
+		<article className="tracking-wide leading-7 space-y-12">
+			<Link href={"/projects"} className="x-link group">
+				<LuChevronLeft size={24} className="group-hover:animate-pulse" />
 				Back to Projects
 			</Link>
 
-			<section className='bg-card max-w-3xl p-5 rounded-md mx-auto lg:p-10'>
+			<section className="bg-card max-w-3xl p-5 rounded-md mx-auto lg:p-10">
 				<figure>
 					<Image
 						src={image}
 						alt={`${name} screenshot`}
-						loading='eager'
-						className='rounded-md'
+						loading="eager"
+						className="rounded-md"
 					/>
 
-					<figcaption className='my-4 space-y-4'>
-						<h1 className='text-2xl'>{name}</h1>
+					<figcaption className="my-4 space-y-4">
+						<h1 className="text-2xl">{name}</h1>
 						<p>{description}</p>
 					</figcaption>
 				</figure>
 
-				<div className='my-8 space-y-3.5 max-w-3xl mx-auto'>
-					<p className='flex-between border-b border-accent/15 pb-1.5'>
-						<span className='font-medium'>Date</span>
-						<span className='text-page-txt'>{date}</span>
+				<div className="my-8 space-y-3.5 max-w-3xl mx-auto">
+					<p className="flex-between border-b border-accent/15 pb-1.5">
+						<span className="font-medium">Date</span>
+						<span className="text-page-txt">{date}</span>
 					</p>
-					<p className='flex-between border-b border-accent/15 pb-1.5'>
-						<span className='font-medium'>Role</span>
-						<span className='text-page-txt'>{role}</span>
+					<p className="flex-between border-b border-accent/15 pb-1.5">
+						<span className="font-medium">Role</span>
+						<span className="text-page-txt">{role}</span>
 					</p>
 				</div>
 
-				<div className='max-w-53 mx-auto space-x-8 my-7 mt-10 lg:mt-16 lg:mb-0 lg:text-center'>
+				<div className="max-w-53 mx-auto space-x-8 my-7 mt-10 lg:mt-16 lg:mb-0 lg:text-center">
 					<a
 						href={liveURL}
-						target='_blank'
-						rel='noopener noreferrer'
-						className='x-link group'
+						target="_blank"
+						rel="noopener noreferrer"
+						className="x-link group"
 					>
 						View Live
-						<LuExternalLink className='group-hover:animate-pulse' />
+						<LuExternalLink className="group-hover:animate-pulse" />
 					</a>
 
-					{category !== 'Client Work' && (
+					{category !== "Client Work" && (
 						<a
 							href={githubURL}
-							target='_blank'
-							rel='noopener noreferrer'
-							className='x-link group'
+							target="_blank"
+							rel="noopener noreferrer"
+							className="x-link group"
 						>
 							View Code
-							<LuGithub className='group-hover:animate-pulse' />
+							<LuGithub className="group-hover:animate-pulse" />
 						</a>
 					)}
 				</div>
 			</section>
 
-			<div className='space-y-9 lg:grid lg:grid-cols-2 lg:gap-8 lg:space-y-0'>
+			<div className="space-y-9 lg:grid lg:grid-cols-2 lg:gap-8 lg:space-y-0">
 				{challenges && (
-					<section className='project-details-descr-section'>
+					<section className="project-details-descr-section">
 						<Tooltip>
 							<TooltipTrigger>
-								<h3 className='project-details-descr-heading group'>
+								<h3 className="project-details-descr-heading group">
 									Challenge
-									<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
+									<LuInfo className="project-details-descr-icon group-hover:animate-pulse" />
 								</h3>
 							</TooltipTrigger>
 							<TooltipContent>
@@ -122,7 +122,7 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 							</TooltipContent>
 						</Tooltip>
 
-						<ol className='project-details-descr-list list-decimal'>
+						<ol className="project-details-descr-list list-decimal">
 							{challenges.map((challenge) => (
 								<li key={challenge}>{challenge}</li>
 							))}
@@ -131,12 +131,12 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 				)}
 
 				{addedFeatures && (
-					<section className='project-details-descr-section'>
+					<section className="project-details-descr-section">
 						<Tooltip>
 							<TooltipTrigger>
-								<h3 className='project-details-descr-heading group'>
+								<h3 className="project-details-descr-heading group">
 									Added Features
-									<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
+									<LuInfo className="project-details-descr-icon group-hover:animate-pulse" />
 								</h3>
 							</TooltipTrigger>
 
@@ -148,7 +148,7 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 							</TooltipContent>
 						</Tooltip>
 
-						<ol className='project-details-descr-list list-decimal'>
+						<ol className="project-details-descr-list list-decimal">
 							{addedFeatures.map((feat) => (
 								<li key={feat}>{feat}</li>
 							))}
@@ -157,12 +157,12 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 				)}
 
 				{solution && (
-					<section className='project-details-descr-section'>
+					<section className="project-details-descr-section">
 						<Tooltip>
 							<TooltipTrigger>
-								<h3 className='project-details-descr-heading group'>
+								<h3 className="project-details-descr-heading group">
 									My Solution
-									<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
+									<LuInfo className="project-details-descr-icon group-hover:animate-pulse" />
 								</h3>
 							</TooltipTrigger>
 
@@ -173,17 +173,17 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 							</TooltipContent>
 						</Tooltip>
 
-						<p className='max-w-lg mx-auto'>{solution}</p>
+						<p className="max-w-lg mx-auto">{solution}</p>
 					</section>
 				)}
 
 				{techStacks && (
-					<section className='project-details-descr-section'>
+					<section className="project-details-descr-section">
 						<Tooltip>
 							<TooltipTrigger>
-								<h3 className='project-details-descr-heading group'>
+								<h3 className="project-details-descr-heading group">
 									Tech Stacks
-									<LuInfo className='project-details-descr-icon group-hover:animate-pulse' />
+									<LuInfo className="project-details-descr-icon group-hover:animate-pulse" />
 								</h3>
 							</TooltipTrigger>
 
@@ -192,7 +192,7 @@ const Projects = async ({ params }: { params: Promise<{ id: string }> }) => {
 							</TooltipContent>
 						</Tooltip>
 
-						<ul className='flex flex-wrap gap-2.5 my-3 text-page-txt justify-center items-center list-separator'>
+						<ul className="flex flex-wrap gap-2.5 my-3 text-page-txt justify-center items-center list-separator">
 							{techStacks.map((tech) => (
 								<li key={tech}>{tech}</li>
 							))}

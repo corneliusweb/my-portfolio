@@ -1,20 +1,23 @@
-import { LuDownload } from 'react-icons/lu';
-import ContactForm from '../client/ContactForm';
-import SocialLinks from '../server/SocialLinks';
+import { LuDownload } from "react-icons/lu";
+import ContactForm from "../client/ContactForm";
+import SocialLinks from "../server/SocialLinks";
 
 const ContactSection = ({ intro }: { intro?: string }) => {
 	return (
-		<section id='contact' className='tracking-wide leading-7 lg:flex lg:gap-12 lg:items-center'>
-			<div className='mb-15 lg:flex-1 lg:mb-0'>
-				<h2 className='section-heading'>Let's Connect</h2>
+		<section
+			id="contact"
+			className="tracking-wide leading-7 lg:flex lg:gap-12 lg:items-center"
+		>
+			<div className="mb-15 lg:flex-1 lg:mb-0">
+				<h2 className="section-heading">Let's Connect</h2>
 
-				{intro && <p className='mb-3'>{intro}</p>}
+				{intro && <p className="mb-3">{intro}</p>}
 
 				<p>
-					Say hello at{' '}
+					Say hello at{" "}
 					<a
-						href='mailto:cornelius.webdev@gmail.com'
-						className='text-accent text-sm'
+						href="mailto:cornelius.webdev@gmail.com"
+						className="text-accent text-sm"
 					>
 						cornelius.webdev@gmail.com
 					</a>
@@ -23,19 +26,19 @@ const ContactSection = ({ intro }: { intro?: string }) => {
 				<p>
 					For more information,
 					<a
-						href='/documents/my-resume.pdf'
-						download='Resume - Cornelius Asogwa'
-						className='text-accent text-sm'
+						href="/documents/my-resume.pdf"
+						download="Resume - Cornelius Asogwa"
+						className="text-accent text-sm"
 					>
-						{' '}
+						{" "}
 						download my resume here
-						<LuDownload className='ml-1 inline-flex' />
+						<LuDownload className="ml-1 inline-flex" />
 					</a>
 				</p>
 
 				<SocialLinks
-					IconClass='text-2xl text-accent hover:text-accent-hover'
-					ULClass='flex gap-7 my-5'
+					IconClass="text-2xl text-accent hover:text-accent-hover"
+					ULClass="flex gap-7 my-5"
 					size={28}
 				/>
 
@@ -45,7 +48,7 @@ const ContactSection = ({ intro }: { intro?: string }) => {
 				</p>
 			</div>
 
-			<div className='flex-1'>
+			<div className="flex-1">
 				<ContactForm />
 			</div>
 		</section>

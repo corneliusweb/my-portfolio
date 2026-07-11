@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -123,7 +123,7 @@
 	html {
 		scroll-behavior: smooth;
 	}
-	
+
 	body {
 		background-color: #0a0a0a;
 		color: #f1f1f1;
@@ -270,7 +270,7 @@
 
 	/* project details tech stacks list */
 	.list-separator > *:not(:first-child):before {
-		content: '';
+		content: "";
 		@apply inline-block min-h-4 w-0.5 bg-accent/15 mr-2.5 self-start;
 	}
 }

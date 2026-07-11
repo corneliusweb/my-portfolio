@@ -1,5 +1,5 @@
-import { StaticImageData } from 'next/image';
-import type { IconType } from 'react-icons';
+import { StaticImageData } from "next/image";
+import type { IconType } from "react-icons";
 
 export interface Project {
 	id: string;
@@ -20,7 +20,7 @@ export interface Project {
 export interface Skill {
 	id: string;
 	name: string;
-	category: 'Core' | 'Framework' | 'Tool' | 'Library';
+	category: "Core" | "Framework" | "Tool" | "Library";
 	icon?: IconType | React.FC<CustomIconProps>;
 }
 
@@ -31,7 +31,7 @@ export interface SocialLink {
 	rel: string;
 	target?: string;
 	title: string;
-	'aria-label': string;
+	"aria-label": string;
 	icon: IconType;
 }
 

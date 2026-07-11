@@ -1,11 +1,11 @@
-import { Project } from '@/app/types';
-import { Metadata } from 'next';
+import { Project } from "@/app/types";
+import { Metadata } from "next";
 
 const siteConfig: Record<string, string> = {
-	siteName: 'Cornelius Asogwa',
-	siteTitle: 'Cornelius Asogwa - Fullstack Developer',
-	twitter: '@iamdevcornelius',
-	siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+	siteName: "Cornelius Asogwa",
+	siteTitle: "Cornelius Asogwa - Fullstack Developer",
+	twitter: "@iamdevcornelius",
+	siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
 	siteDescription:
 		"Hi, I'm Cornelius Asogwa, a curious developer building ultra-fast modern & accessible fullstack web apps with Next.js, Supabase, React, and TypeScript. Explore my projects and get in touch!",
 };
@@ -102,37 +102,37 @@ export const baseMetadata: Metadata = {
 };
 
 export const aboutMetadata: Metadata = {
-	title: 'About Me',
+	title: "About Me",
 	description:
-		'Learn about Cornelius Asogwa - my journey as a fullstack developer, technical skills, and work experience.',
+		"Learn about Cornelius Asogwa - my journey as a fullstack developer, technical skills, and work experience.",
 
 	openGraph: {
 		title: `About ${siteConfig.siteName}`,
-		description: 'Learn about my journey as a fullstack developer.',
+		description: "Learn about my journey as a fullstack developer.",
 		url: `${siteConfig.siteUrl}/about`,
 	},
 };
 
 export const projectsMetadata: Metadata = {
-	title: 'Projects',
+	title: "Projects",
 	description:
-		'Explore my portfolio of web development projects including React applications, Next.js websites, and Supabase powered apps.',
+		"Explore my portfolio of web development projects including React applications, Next.js websites, and Supabase powered apps.",
 
 	openGraph: {
 		title: `Projects by ${siteConfig.siteName}`,
-		description: 'Explore my web development portfolio.',
+		description: "Explore my web development portfolio.",
 		url: `${siteConfig.siteUrl}/projects`,
 	},
 };
 
 export const contactMetadata: Metadata = {
-	title: 'Contact Me',
+	title: "Contact Me",
 	description:
-		'Get in touch with Cornelius Asogwa for web development projects, collaborations, or job opportunities.',
+		"Get in touch with Cornelius Asogwa for web development projects, collaborations, or job opportunities.",
 
 	openGraph: {
 		title: `Contact ${siteConfig.siteName}`,
-		description: 'Get in touch for web development projects.',
+		description: "Get in touch for web development projects.",
 		url: `${siteConfig.siteUrl}/contact`,
 	},
 };
@@ -141,13 +141,13 @@ export const createProjectMetadata = (project: Project) => {
 	// create project titles from the project id
 	const createTitle = () => {
 		const { id: projectName } = project;
-		if (projectName.includes('-')) {
+		if (projectName.includes("-")) {
 			return projectName
-				.split('-')
+				.split("-")
 				.map((word) => word.at(0)?.toUpperCase() + word.slice(1))
-				.join(' ');
+				.join(" ");
 		} else {
-			return (projectName.at(0)?.toUpperCase() ?? '') + projectName.slice(1);
+			return (projectName.at(0)?.toUpperCase() ?? "") + projectName.slice(1);
 		}
 	};
 
@@ -159,7 +159,7 @@ export const createProjectMetadata = (project: Project) => {
 			title: `${createTitle()} - Project by ${siteConfig.siteName}`,
 			description: project.description,
 			url: `${siteConfig.siteUrl}/projects/${project.id}`,
-			type: 'article' as const,
+			type: "article" as const,
 		},
 	};
 };

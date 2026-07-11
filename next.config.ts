@@ -1,9 +1,12 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
+
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
-  compiler: {
-    // automatically remove console logs from production
-		removeConsole: process.env.NODE_ENV === 'production',
+	reactCompiler: isProd,
+	compiler: {
+		// automatically remove console logs from production
+		removeConsole: isProd,
 	},
 };
 
