@@ -1,4 +1,4 @@
-import { projectsMetadata } from '@/lib/metadata';
+import { projectsMetadata } from "@/lib/metadata";
 
 export const metadata = projectsMetadata;
 

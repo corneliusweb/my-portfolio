@@ -1,0 +1,13 @@
+node_modules
+.gitignore
+build
+coverage
+next
+
+package.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+public/images
+public/images/*
+public/documents

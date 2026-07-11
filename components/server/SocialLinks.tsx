@@ -1,10 +1,10 @@
-import { socials } from '@/app/data/social-links';
-import type { SocialLinkProps } from '@/app/types';
+import { socials } from "@/app/data/social-links";
+import type { SocialLinkProps } from "@/app/types";
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipTrigger,
-} from '@/components/ui/tooltip';
+} from "@/components/ui/tooltip";
 
 const SocialLinks = ({
 	show,
@@ -24,7 +24,7 @@ const SocialLinks = ({
 					title,
 					target,
 					rel,
-					['aria-label']: ariaLabel,
+					["aria-label"]: ariaLabel,
 					icon: Icon,
 				}) => (
 					<li key={id}>
@@ -37,7 +37,7 @@ const SocialLinks = ({
 									className={LinkClass}
 									aria-label={ariaLabel}
 								>
-									<span className='sr-only'>{name}</span>{' '}
+									<span className="sr-only">{name}</span>{" "}
 									{/* link text for screen readers */}
 									<Icon className={IconClass} size={size} />
 								</a>
@@ -47,7 +47,7 @@ const SocialLinks = ({
 							</TooltipContent>
 						</Tooltip>
 					</li>
-				)
+				),
 			)}
 		</ul>
 	);
