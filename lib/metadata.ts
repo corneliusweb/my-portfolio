@@ -16,6 +16,7 @@ export const baseMetadata: Metadata = {
 		default: siteConfig.siteTitle,
 	},
 	description: siteConfig.siteDescription,
+	manifest: "/manifest.webmanifest",
 	alternates: {
 		canonical: siteConfig.siteUrl,
 	},
