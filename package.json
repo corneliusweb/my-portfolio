@@ -8,7 +8,7 @@
 		"build": "next build --turbopack",
 		"start": "next start",
 		"lint": "eslint",
-		"format": "prettier --write"
+		"format": "prettier --write --ignore-path .gitignore ."
 	},
 	"dependencies": {
 		"@radix-ui/react-avatar": "^1.2.2",

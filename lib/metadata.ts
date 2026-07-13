@@ -16,6 +16,7 @@ export const baseMetadata: Metadata = {
 		default: siteConfig.siteTitle,
 	},
 	description: siteConfig.siteDescription,
+	manifest: "/manifest.webmanifest",
 	alternates: {
 		canonical: siteConfig.siteUrl,
 	},
@@ -65,7 +66,7 @@ export const baseMetadata: Metadata = {
 		images: [`${siteConfig.siteUrl}/images/corneliusweb.png`],
 	},
 	verification: {
-		google: "howUca1R_yY51W14dNXBXvFEfEyNL0naLuoh8p-ovu0",
+		google: "yT6zIsgqNBdJQYXzeLVJpaaZOEjpAtNqpNAig_j0QjY",
 		yandex: "c9ee55639cd532ef",
 		// Bing was verified using Google through import
 	},
